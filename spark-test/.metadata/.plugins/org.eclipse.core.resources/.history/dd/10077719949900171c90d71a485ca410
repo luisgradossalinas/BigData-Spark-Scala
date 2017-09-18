@@ -1,0 +1,16 @@
+package tablon
+
+object promedio_de_transacciones_cliente {
+  
+  
+  def kpi_promedio_transacciones_por_clientes(ruta: String) = {
+	val rdd = sc.textFile(ruta)
+	val r1 = rdd.map(r => r.split("\t")).map(r => (r(6),r(14)))
+	val transacciones = r1.map(x => (x._1,1)).reduceByKey(_+_) 
+	val clientsesUnicos = r1.distinct().map(x => (x._1,1)).reduceByKey(_+_) 
+	val resultado = transacciones.join(clientsesUnicos).mapValues(x => (x._2.toFloat / x._1.toFloat))
+	resultado.sortByKey().foreach(println)
+}
+  
+  
+}

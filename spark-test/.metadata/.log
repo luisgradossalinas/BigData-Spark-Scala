@@ -230,3 +230,69 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-14 16:31:41.354
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\promedio_de_transacciones_cliente.scala at: offset: 24, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-14 16:31:50.939
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\transxClientesEstab.scala at: offset: 398, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-14 16:39:12.684
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 27, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-14 16:52:12.573
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 559, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-14 17:06:18.400
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 735, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-14 17:17:07.818
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 887, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-14 17:20:16.584
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 818, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 10:22:09.828
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 1307, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 10:34:16.550
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 1405, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 10:43:03.987
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.$anonfun$mkCompletionProposal$7(ScalaPresentationCompiler.scala:417)
+	at org.scalaide.ui.internal.completion.ScalaCompletionProposalImpl.getAdditionalProposalInfo(ScalaCompletionProposalImpl.scala:109)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 12:41:23.579
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 2575, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 16:31:01.291
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 2943, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 16:31:56.128
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 2967, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 16:35:23.239
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 2841, length: 0

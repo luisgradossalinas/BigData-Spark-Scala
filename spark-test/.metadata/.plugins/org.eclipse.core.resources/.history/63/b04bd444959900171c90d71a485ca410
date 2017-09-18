@@ -1,0 +1,21 @@
+package tablon
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+
+object test {
+  
+   
+  
+  
+   def main(args: Array[String]) {
+    
+    
+    val sc = new SparkContext("local[*]", "test")
+     val c = sc.parallelize(Array(("est1", 1), ("est1", 1),("est1", 2)))
+
+    
+  }
+  
+}

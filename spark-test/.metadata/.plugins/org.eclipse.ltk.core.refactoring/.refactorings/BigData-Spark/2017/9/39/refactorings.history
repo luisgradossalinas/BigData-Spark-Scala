@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BigData-Spark/src/tablon/pruebaa.scala&apos; to &apos;prueba.scala&apos;" description="Rename resource &apos;pruebaa.scala&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/tablon/pruebaa.scala" name="prueba.scala" stamp="1505752180229" updateReferences="true"/>
+</session>

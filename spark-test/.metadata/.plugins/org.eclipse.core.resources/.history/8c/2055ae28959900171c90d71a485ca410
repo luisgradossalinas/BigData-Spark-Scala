@@ -1,0 +1,19 @@
+package tablon
+
+object test {
+  
+  
+  
+  
+  
+  
+   def main(args: Array[String]) {
+    
+    
+    val sc = new SparkContext("local[*]", "test")
+     val c = sc.parallelize(Array(("est1", 1), ("est1", 1),("est1", 2)))
+
+    
+  }
+  
+}
