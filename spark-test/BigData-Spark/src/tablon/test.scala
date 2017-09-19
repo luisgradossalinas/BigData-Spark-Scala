@@ -71,6 +71,14 @@ object test {
         (Iveth,(28,2500))
       */
      
+     println("Ejemplo de Cogroup")
+     val cogroup = rdd1.cogroup(rdd2).foreach(println)
+     /*
+    (Jorge,(CompactBuffer(33),CompactBuffer(8000)))
+    (Martin,(CompactBuffer(28),CompactBuffer(4600)))
+    (Iveth,(CompactBuffer(28),CompactBuffer(2500)))
+      * */
+     
      //Sumar los 2 valores del join
      joinRdd.mapValues(x => (x._1.toFloat + x._2.toFloat)).foreach(println)
      /*
@@ -79,15 +87,66 @@ object test {
     (Martin,4628.0)
      */
      
-     val dataCurso = sc.parallelize(List(("Matemática",40,2),("Lenguaje I",50,3),("Computación",55,2),("Lenguaje II",20,4)))
+     val dataCurso = sc.parallelize(List(("Matemática",40,2),("Lenguaje I",50,3),("Computación",55,2),("Lenguaje II",20,4),("Razonamiento Matemático",80,5)))
      
      println("Búsqueda 1")
      dataCurso.filter(x => x._2 >= 40 && x._2 <= 50 && x._1.contains("Matemá")).foreach(println)
      println("Búsqueda 2")
-     dataCurso.filter(x => x._1.startsWith("Mate")).foreach(println)
+     dataCurso.filter(x => x._1.startsWith("Mate")).foreach(println) //Busca si inicia con Mate
      println("Búsqueda 3")
-     dataCurso.filter(x => x._1.contains("Matemá")).foreach(println)
+     dataCurso.filter(x => x._1.contains("Matemá")).foreach(println) //Busca como si fuera un like
          
+     println("Búsqueda 4")
+     dataCurso.filter(x => x._2 == 40 || x._2 == 50).foreach(println)
+     //dataCurso.sample(10)
+     //dataCurso.filter(x => x._1.contains("Matemá")).saveAsTextFile("/pruebita")  //Se guarda en HDFS
+     
+     println("Uso de groupByKey")
+     dataCurso.map(x => (x._1, 1)).reduceByKey(_+_).groupByKey().foreach(println)
+     
+     println("Uso de filter condicional diferente a")
+     dataCurso.filter(x => x._2 != 40).foreach(println) 
+     
+     println("Uso de map")
+     dataCurso.map(x => (x._1)).foreach(println)
+     println("Uso de flatMap") //Para extraer letras
+     dataCurso.flatMap(x => (x._1)).foreach(println)
+     
+     
+     val dataNumeros = sc.parallelize(List((10,1),(10,1),(20,2)))
+     
+     println("Uso de distinct")
+     dataNumeros.distinct().foreach(println)
+     /*
+      (10,1)
+			(20,2)
+     */
+     
+     
+    val data1 = sc.parallelize(List(("E001",550),("E002",650),("E003",890)))
+    val data2 = sc.parallelize(List(("E002",650)))
+    
+    println("Uso de join")
+    data1.join(data2).foreach(println)
+    println("Uso de union")
+    data1.union(data2).foreach(println)
+    println("Uso de intersection")
+    data1.intersection(data2).foreach(println)
+    println("Uso de subtract")
+    data1.subtract(data2).foreach(println) 
+    
+    
+    val x1 = 1
+    val num = x1 match {
+      case 1 => "uno"
+      case 2 => "dos"
+      case 3 => "tres"
+      case 4 => "cuatro"
+    }
+    println("Prueba con 1")
+    println(num(1))
+    println("Prueba con 2")
+    println(num(2))
      
   }
   

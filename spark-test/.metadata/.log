@@ -296,3 +296,88 @@ java.lang.Throwable
 
 !ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 16:35:23.239
 !MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 2841, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 17:20:16.295
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 3158, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 17:20:16.304
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 3190, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 17:55:48.497
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 2598, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-18 17:55:48.546
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 2686, length: 0
+!SESSION 2017-09-19 09:23:15.337 -----------------------------------------------
+eclipse.buildId=4.6.1-vfinal-2017-06-09T11:19:56Z-Typesafe
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2017-09-19 09:23:38.192
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-09-19 09:23:38.192
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e465050,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@147f2078,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-09-19 09:23:57.359
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lgradoss'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 10:55:09.010
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 3382, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 11:17:12.826
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 4654, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 11:17:13.638
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 4627, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 11:17:44.943
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 4735, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 11:17:44.945
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 4709, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 11:17:46.775
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 4734, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 11:17:51.548
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\test.scala at: offset: 4732, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 13:52:13.436
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesUnicosPorEstablecimiento.scala at: offset: 415, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 15:18:14.375
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 772, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 15:27:42.656
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 1575, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 17:34:24.640
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 1201, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 17:39:31.815
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 1293, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 17:43:06.427
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 1134, length: 0
