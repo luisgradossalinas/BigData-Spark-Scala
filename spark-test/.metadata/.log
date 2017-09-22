@@ -381,3 +381,1063 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.scala-ide.sdt.core 1 0 2017-09-19 17:43:06.427
 !MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 1134, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-20 10:36:44.804
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 4722, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-20 11:17:47.969
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 285, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-20 11:39:27.864
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 777, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-20 11:56:19.308
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.ui.internal.editor.decorators.custom.AllMethodsTraverserImpl.checkType(TraverserImpl.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.custom.AllMethodsTraverserImpl.apply(TraverserImpl.scala:107)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.$anonfun$traverse$1(TraverserImpl.scala:61)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.$anonfun$traverse$1$adapted(TraverserImpl.scala:60)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:60)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:57)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1287)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:64)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:57)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseTrees$1(Trees.scala:2484)
+	at scala.reflect.api.Trees$Traverser.traverseTrees(Trees.scala:2484)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1238)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:64)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:57)
+	at scala.reflect.internal.Trees.$anonfun$itraverse$1(Trees.scala:1219)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.internal.Trees.traverseMemberDef$1(Trees.scala:1207)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1332)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:64)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:57)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$2(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$1(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.traverseStats(Trees.scala:2497)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1236)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:64)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:57)
+	at scala.reflect.internal.Trees.$anonfun$itraverse$1(Trees.scala:1212)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.internal.Trees.traverseMemberDef$1(Trees.scala:1207)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1331)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:64)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:57)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$2(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$1(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.traverseStats(Trees.scala:2497)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1330)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$$anon$1.traverse(TraverserImpl.scala:64)
+	at org.scalaide.ui.internal.editor.decorators.custom.TraverserImpl$.extract(TraverserImpl.scala:66)
+	at org.scalaide.ui.internal.editor.decorators.custom.CustomSemanticAction.findAll(CustomSemanticAction.scala:31)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.findAnnotations$1(BaseSemanticAction.scala:146)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.$anonfun$apply$1(BaseSemanticAction.scala:158)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.$anonfun$apply$1$adapted(BaseSemanticAction.scala:139)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.apply(BaseSemanticAction.scala:139)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$3(ScalaSourceFileEditor.scala:105)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$1(ScalaSourceFileEditor.scala:105)
+	at scala.collection.mutable.ArraySeq.foreach(ArraySeq.scala:74)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.reconciled(ScalaSourceFileEditor.scala:103)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5$adapted(ScalaSourceFileEditor.scala:478)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.reconciled(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:379)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-20 17:38:52.652
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\fechas.scala at: offset: 94, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 09:33:59.528
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 1545, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 09:59:45.345
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 2328, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 10:30:07.242
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 4081, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 10:39:51.076
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 1192, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 11:14:29.757
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 1953, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 11:29:57.308
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 2096, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 11:43:47.078
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 2091, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 12:22:06.483
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 2576, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 14:14:08.500
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$25(ScalaHoverImpl.scala:227)
+	at scala.Option$WithFilter.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$lzycompute$1(ScalaHoverImpl.scala:226)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$1(ScalaHoverImpl.scala:205)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$2(ScalaHoverImpl.scala:238)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$1(ScalaHoverImpl.scala:103)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:101)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.super$getHoverInfo2(TextHoverFactory.scala:53)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$6(TextHoverFactory.scala:53)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$1(TextHoverFactory.scala:51)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:04:40.811
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 2821, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:04:50.761
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 3070, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:09:50.949
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 3747, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:11:31.215
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 4903, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:11:32.632
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 4912, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:25:12.492
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 6569, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:38:11.941
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 6305, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:50:42.159
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 5271, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:54:11.588
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 5504, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:54:12.883
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 5346, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:54:34.985
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 6340, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 15:55:04.402
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\clientesRecurrentes.scala at: offset: 7559, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 16:32:48.108
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\aClientesRecurrentes.scala at: offset: 504, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 16:32:48.153
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\BigData-Spark\src\tablon\aClientesRecurrentes.scala at: offset: 502, length: 0
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.048
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.058
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.061
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.082
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.084
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.086
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.090
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.097
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.099
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.142
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.150
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.152
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.154
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.156
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.163
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.165
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.167
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.169
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.171
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.173
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.181
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.493
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.496
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.500
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.508
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.515
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.516
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.525
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.539
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.541
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.544
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.546
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.547
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.622
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.624
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.626
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.628
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.630
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.631
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.633
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.639
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.640
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.642
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.652
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.654
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.656
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.665
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.718
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.721
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.723
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.725
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.729
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.744
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.776
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.793
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.810
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.825
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.840
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.856
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.867
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.878
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.892
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.905
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.942
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.944
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.954
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.968
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.978
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:38.990
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.002
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.014
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.024
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.035
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.052
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.062
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.095
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.097
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.099
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.106
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.116
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.125
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.135
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.145
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.157
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.168
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.183
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.194
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.205
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.217
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.233
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.248
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.521
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.522
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.529
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.539
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.551
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.563
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.571
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.584
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.596
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.608
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.619
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.632
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.641
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.650
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.661
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.670
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.680
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.689
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.700
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.711
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.721
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.735
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.748
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.762
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.784
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.804
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.821
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.837
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.849
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.860
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.874
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.910
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:39.924
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.067
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.069
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.071
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.073
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.074
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.112
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.113
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.114
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.133
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.134
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.135
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.136
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.137
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.138
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.139
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.142
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.144
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.145
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.147
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.148
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.154
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.161
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.168
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.177
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.183
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.190
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.198
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.279
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.286
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:37:40.379
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 2 0 2017-09-21 16:40:10.620
+!MESSAGE Preference scala.compiler.sourceLevel was uninitialized for LONDON, setting default to 2.12.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 16:40:10.625
+!MESSAGE Adding  -Xsource:2.11 -Ymacro-expand:none to compiler arguments of LONDON because of: requested Scala Installation change
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.307
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.308
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.309
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.310
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.310
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.311
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.311
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.312
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.312
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.313
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 16:46:47.314
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 16:54:25.301
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\ClientesRecurrentes.scala at: offset: 2387, length: 0
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.541
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.544
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.546
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.554
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.800
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.814
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.832
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.852
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.877
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.897
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:07.914
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:08.117
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:08.946
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:08.973
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:08.993
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.016
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.037
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.059
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.079
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.684
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.835
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.837
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.891
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.927
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:09.961
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:04:10.133
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 17:07:32.009
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\ClientesRecurrentes.scala at: offset: 1972, length: 0
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.657
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.660
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.662
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.664
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.668
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.671
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.673
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.675
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.841
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.843
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.844
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.846
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.847
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:07:55.848
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 17:13:08.861
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\ClientesRecurrentes.scala at: offset: 12431, length: 0
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.050
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.054
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.056
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.065
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.264
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.292
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.359
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.398
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.419
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.445
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.504
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:42.520
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:43.584
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:43.609
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:43.632
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:43.656
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:43.688
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:43.710
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:43.755
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:44.301
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:44.344
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:44.375
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:44.401
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:44.432
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:44.455
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:44.494
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.035
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.053
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.079
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.105
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.130
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.155
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.174
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.254
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.286
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.710
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.749
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.787
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.817
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.853
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.884
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:47.992
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:48.232
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:48.278
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:50.752
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:20:50.773
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:21:09.654
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:21:10.987
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-09-21 17:21:11.016
+!MESSAGE scala.reflect.internal.MissingRequirementError: object scala in compiler mirror not found.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 17:29:22.904
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\ClientesRecurrentes.scala at: offset: 4257, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 17:30:02.303
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\ClientesRecurrentes.scala at: offset: 3639, length: 0
+
+!ENTRY org.eclipse.ui 4 0 2017-09-21 17:32:44.081
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.jface.text.BadPositionCategoryException)
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4211)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3827)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+Caused by: org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.removePositionCategory(AbstractDocument.java:1056)
+	at org.scalaide.ui.internal.completion.ScalaCompletionProposalImpl$$anon$1.left(ScalaCompletionProposalImpl.scala:197)
+	at org.eclipse.jface.text.link.LinkedModeModel.exit(LinkedModeModel.java:341)
+	at org.eclipse.jface.text.link.LinkedModeUI$3.run(LinkedModeUI.java:1185)
+	at org.eclipse.jface.text.link.LinkedModeUI.leave(LinkedModeUI.java:1195)
+	at org.eclipse.jface.text.link.LinkedModeUI$ExitListener.resume(LinkedModeUI.java:223)
+	at org.eclipse.jface.text.link.LinkedModeModel.resume(LinkedModeModel.java:728)
+	at org.eclipse.jface.text.link.LinkedModeModel.exit(LinkedModeModel.java:346)
+	at org.eclipse.jface.text.link.LinkedModeUI$3.run(LinkedModeUI.java:1185)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	... 23 more
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 17:34:04.977
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\ClientesRecurrentes.scala at: offset: 4745, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-09-21 17:34:10.904
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\ClientesRecurrentes.scala at: offset: 5892, length: 0

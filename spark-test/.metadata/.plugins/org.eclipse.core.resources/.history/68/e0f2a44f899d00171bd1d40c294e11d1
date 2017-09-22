@@ -1,0 +1,59 @@
+package tablon
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+
+object clientesRecurrentes {
+  
+  def kpi_clientes_recurrentes(ruta: String,establecimiento:String,inicio:String, fin:String) = {
+      
+  val sc = new SparkContext("local[*]", "clientesRecurrentes")
+	val rddTablon = sc.textFile(ruta)
+	val rddDepurado = rddTablon.map(r => r.split("\t")).map(r => (r(6),r(14),r(25)))
+	val rddFiltrado = rddDepurado.filter(x => (x._3 >= inicio && x._3 <= fin) && x._1 == establecimiento)
+	val rddXclientes = rddFiltrado.map(x => (x._1+"-"+x._2,1)).reduceByKey(_+_)
+	val rddVisitas_Frecuencia1 = rddXclientes.filter(x => x._2 == 1).map(x => (x._1.split("-")(0)+"-1",1)).reduceByKey(_+_)
+	val rddVisitas_Frecuencia2 = rddXclientes.filter(x => x._2 == 2).map(x => (x._1.split("-")(0)+"-2",1)).reduceByKey(_+_)
+	val rddVisitas_Frecuencia3_5 = rddXclientes.filter(x => x._2 >= 3 & x._2 <=5).map(x => (x._1.split("-")(0)+"-3_5",1)).reduceByKey(_+_)
+	val rddVisitas_Frecuencia6_10 = rddXclientes.filter(x => x._2 >= 6 & x._2 <=10).map(x => (x._1.split("-")(0)+"6_10",1)).reduceByKey(_+_)
+	val rddVisitas_Frecuencia11_20 = rddXclientes.filter(x => x._2 >= 11 & x._2 <=20).map(x => (x._1.split("-")(0)+"11_20",1)).reduceByKey(_+_)
+	val rddVisitas_Frecuencia21_mas = rddXclientes.filter(x => x._2 >= 21).map(x => (x._1.split("-")(0)+"21_mas",1)).reduceByKey(_+_)
+	
+	val visitasAgrupadas = rddVisitas_Frecuencia1.union(rddVisitas_Frecuencia2).union(rddVisitas_Frecuencia3_5).union(rddVisitas_Frecuencia6_10).union(rddVisitas_Frecuencia11_20).union(rddVisitas_Frecuencia21_mas)
+	
+	println("Registros detallados")
+	rddFiltrado.foreach(println)
+	println("Número de registros")
+	println(rddFiltrado.count())
+	println("Agrupación por clientes")
+	rddXclientes.foreach(println)
+	println(rddXclientes.count())
+
+	/*
+	println("Rango 1")
+	rddVisitas_Frecuencia1.foreach(println)
+	println(rddVisitas_Frecuencia1.count())
+	rddVisitas_Frecuencia2.foreach(println)
+	println(rddVisitas_Frecuencia2.count())
+	rddVisitas_Frecuencia3_5.foreach(println)
+	println(rddVisitas_Frecuencia3_5.count())
+	rddVisitas_Frecuencia6_10.foreach(println)
+	println(rddVisitas_Frecuencia6_10.count())
+	rddVisitas_Frecuencia11_20.foreach(println)
+	println(rddVisitas_Frecuencia11_20.count())
+	rddVisitas_Frecuencia21_mas.foreach(println)
+	println(rddVisitas_Frecuencia21_mas.count())
+	*/
+	visitasAgrupadas.foreach(println)
+	 
+    }
+  
+  
+  def main(args: Array[String]) {
+    
+    kpi_clientes_recurrentes("tablon.tsv","100070934","201609","201610")
+
+  }
+  
+}

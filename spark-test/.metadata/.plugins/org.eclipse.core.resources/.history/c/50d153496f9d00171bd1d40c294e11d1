@@ -1,0 +1,31 @@
+package tablon
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+
+object clientesRecurrentes {
+  
+  def kpi_clientes_recurrentes(ruta: String,inicio:String, fin:String) = {
+      
+    val sc = new SparkContext("local[*]", "clientesRecurrentes")
+	val rdd = sc.textFile(ruta)
+	val r1 = rdd.map(r => r.split("\t")).map(r => (r(6),r(14),r(25)))
+	val r1Filtrado = r1.filter(x => x._3 >= inicio && x._3 <= fin)
+	
+	r1Filtrado.foreach(println)
+	println("Número de registros")
+	r1Filtrado.count()
+
+    }
+  
+  
+  def main(args: Array[String]) {
+    
+    kpi_clientes_recurrentes("tablon.tsv","201601","201601")
+    
+    
+    
+  }
+  
+}

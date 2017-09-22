@@ -1,0 +1,28 @@
+package tablon
+
+object fechas {
+  
+  
+  def calculoFecha (fecha:Int) = {
+    
+    //val fec1 = fecha
+    val ano = fecha.toString().substring(0, 4)
+    val mes = fecha.toString().substring(1, 1)
+
+    println(ano)
+    println(mes)
+    
+  }
+  
+  
+  
+  def main(args: Array[String]) {
+    
+    calculoFecha(201701)
+    
+    
+  }
+    
+
+  
+}

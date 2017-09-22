@@ -1,0 +1,98 @@
+package tablon
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import java.util.ArrayList
+import org.apache.spark.rdd.RDD
+
+object ClientesRecurrentes {
+
+  def parseLine(line: String) = {
+
+    val fields = line.split("\t")
+    val codest = fields(6).toString
+    val cic = fields(14).toString
+    val month = fields(25).toString
+    (codest, cic, month)
+  }
+
+  def convertDate(x: String, concurrence: Int): String = {
+
+    var year = x.substring(0, 4).toInt
+    var month = x.substring(4, 6).toInt
+    if (concurrence > 1) {
+      for (x <- 1 to concurrence) {
+        month -= 1
+        if (month <= 0) {
+          year -= 1
+          month = 12
+        }
+      }
+    }
+    var mes = ""
+    if (month < 10) {
+      mes = "0" + month.toString()
+    } else {
+      mes = month.toString()
+    }
+    val result = year.toString() + mes.toString()
+    return result
+  }
+
+  def filterTable(x: RDD[(String, String, String)], codest: String, month: String, concurrence: Int): RDD[String] = {
+
+    val filterByRuc = x.filter(x => x._1 == codest)
+    val filterByMonth = filterByRuc.filter(x => x._3 <= month && x._3 >= convertDate(month, concurrence))
+    val result = filterByMonth.map(x => (x._2).toString())
+    return result
+  }
+
+  def calculateTotalsByRange(rdd: RDD[(String, String, String)], codest: String, month: String, concurrence: Int): RDD[(String, Int)] = {
+
+    val filteredTable = filterTable(rdd, codest, month, concurrence)
+    val totalsByCic = filteredTable.map(x => (x, 1)).reduceByKey((x, y) => x + y)
+
+    val temp1 = totalsByCic.filter(x => x._2 == 1).map(x => ("1", 1)).reduceByKey((x, y) => x + y)
+    val temp2 = totalsByCic.filter(x => x._2 == 2).map(x => ("2", 1)).reduceByKey((x, y) => x + y)
+    val temp3 = totalsByCic.filter(x => x._2 >= 3 && x._2 <= 5).map(x => ("3-5", 1)).reduceByKey((x, y) => x + y)
+    val temp4 = totalsByCic.filter(x => x._2 >= 6 && x._2 <= 10).map(x => ("6-10", 1)).reduceByKey((x, y) => x + y)
+    val temp5 = totalsByCic.filter(x => x._2 >= 11 && x._2 <= 20).map(x => ("11-20", 1)).reduceByKey((x, y) => x + y)
+    val temp6 = totalsByCic.filter(x => x._2 >= 21).map(x => ("21+", 1)).reduceByKey((x, y) => x + y)
+    val totalsByVisit = temp1.union(temp2).union(temp3).union(temp4).union(temp5).union(temp6)
+
+    return totalsByVisit
+  }
+
+  def calculateTotalsByMonth(rdd: RDD[(String, String, String)], codest: String, month: String): RDD[(String, String)] = {
+
+    val index = calculateTotalsByRange(rdd, codest, month, 1)
+    val temp1 = calculateTotalsByRange(rdd, codest, month, 1).map(x => (x._2))
+    val temp2 = calculateTotalsByRange(rdd, codest, month, 3).map(x => (x._2)).toString()
+    val temp3 = calculateTotalsByRange(rdd, codest, month, 6).map(x => (x._2)).toString()
+    val temp4 = calculateTotalsByRange(rdd, codest, month, 12).map(x => (x._2)).toString()
+    val temp5 = calculateTotalsByRange(rdd, codest, month, 24).map(x => (x._2)).toString()
+    val temp6 = (temp1 + temp2 + temp3 + temp4 + temp5)
+
+    val result = index.map(x => (x._1, temp6))
+
+    return result
+  }
+
+  /** Our main function where the action happens */
+  def main(args: Array[String]) {
+
+    // Set the log level to only print errors
+    Logger.getLogger("org").setLevel(Level.ERROR)
+
+    // Create a SparkContext using every core of the local machine
+    val sc = new SparkContext("local[*]", "ClientesRecurrentes")
+
+    val lines = sc.textFile("../tablon.tsv")
+
+    val rdd = lines.map(parseLine)
+
+    calculateTotalsByMonth(rdd, "100070913", "201609").foreach(println)
+
+  }
+}
