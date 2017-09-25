@@ -1,5 +1,4 @@
 INDEX VERSION 1.130+D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\.metadata\.plugins\org.eclipse.jdt.core
 1227103105.index
 838691965.index
-902838639.index
 1594906443.index

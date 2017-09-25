@@ -1,0 +1,14 @@
+package KPI
+
+
+
+object helloWord {
+ 
+  def main(args: Array[String]) {
+    
+    ClientesRecurrentes.main(args)
+    
+    
+  }
+  
+}

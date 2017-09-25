@@ -1,0 +1,35 @@
+package KPI
+
+import java.util.ArrayList
+
+object test {
+
+  
+
+  def main(args: Array[String]) {
+
+    var data = List()
+    
+    val x1,x2
+    
+var arr = Array(1,3,6,12,24)
+
+var v = new Array[String](arr.length)
+
+    var contador = 0
+//var rdd = Array[]
+
+    for (name <- arr) {
+
+      //rdd(contador) = "fsdggfg" + name.toString()
+      //var x<name> = 1
+      
+      
+      
+      println(arr(contador))
+    }
+    
+    //println(arr)
+
+  }
+}

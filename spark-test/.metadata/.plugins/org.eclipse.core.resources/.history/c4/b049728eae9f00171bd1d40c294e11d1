@@ -1,0 +1,26 @@
+package KPI
+
+object test {
+
+  
+
+  def main(args: Array[String]) {
+    
+    val rangoVisitas = List(1, 3, 6, 12, 24)
+    var data = List()
+    
+val arr = Array(1,3,6,12,24)
+
+    var contador = 0
+
+
+    for (name <- arr) {
+
+      arr(contador) = name * 30
+      
+    }
+    
+    println(arr)
+
+  }
+}
