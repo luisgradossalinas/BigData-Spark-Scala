@@ -22,6 +22,16 @@ object NivelIngresos {
    * 57 => RANGO_EDAD
    */
 
+  /**
+   * Función que devuelve que no hay datos
+   */
+  def dataEmpty(): RDD[(String, Int)] = {
+
+    val sc = new SparkContext("local[*]", "NivelIngresos")
+    val c = sc.parallelize(List(("Empty", 0)))
+    return c
+  }
+
   def byClientes(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Int)] = {
 
     val sc = new SparkContext("local[*]", "NivelIngresos")
@@ -30,42 +40,52 @@ object NivelIngresos {
 
     var rddFiltrado = r1.filter(x => (x._2 >= inicio && x._2 <= fin) && esta.exists(p => p.contains(x._1) && x._3 != "\\N"))
     val res = rddFiltrado.map(x => (x._3, 1)).reduceByKey(_ + _).sortByKey()
-    return res
+
+    if (res.count() < 1) {
+      return sc.parallelize(List(("Empty", 0)))
+    } else {
+      return res
+    }
 
   }
 
-  def evolucionCompras(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Double)] = {
+  /**
+   * Devuelve la suma de montos de las transacciones que existen por cada Nivel de Ingresos por meses
+   */
+  def evolucionCompras(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Float)] = {
 
     val sc = new SparkContext("local[*]", "NivelIngresos")
     val rdd = sc.textFile(ruta)
-    val r1 = rdd.map(r => r.split("\t")).map(r => (r(6), r(25), r(46), r(12).toDouble))
+    val r1 = rdd.map(r => r.split("\t")).map(r => (r(6), r(25), r(46), r(12).toFloat))
 
     var rddFiltrado = r1.filter(x => (x._2 >= inicio && x._2 <= fin) && esta.exists(p => p.contains(x._1) && x._3 != "\\N"))
-    val res = rddFiltrado.map(x => (x._2 + "-" + x._3, x._4.toDouble)).reduceByKey(_ + _).sortByKey()
-    return res
+    val res = rddFiltrado.map(x => (x._2 + "-" + x._3, x._4.toFloat)).reduceByKey(_ + _).sortByKey()
+
+    if (res.count() < 1) {
+      return sc.parallelize(List(("Empty", 0)))
+    } else {
+      return res
+    }
 
   }
 
-  def montoPromedio(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Double)] = {
+  /**
+   * Devuelve el promedio de compra según Nivel de Ingresos por un rango de fechas especificado
+   */
+  def montoPromedio(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Float)] = {
 
     val sc = new SparkContext("local[*]", "NivelIngresos")
     val rdd = sc.textFile(ruta)
     val r1 = rdd.map(r => r.split("\t")).map(r => (r(6), r(25), r(46), r(12).toDouble))
 
     var rddFiltrado = r1.filter(x => (x._2 >= inicio && x._2 <= fin) && esta.exists(p => p.contains(x._1) && x._3 != "\\N")).map(r => (r._3, r._4))
+    val res = rddFiltrado.mapValues(x => (x, 1)).reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2)).mapValues(x => (x._1.toFloat / x._2.toFloat).toFloat)
 
-    rddFiltrado.foreach(println)
-
-    val res = rddFiltrado.map(x => (x._1, x._2.toDouble)).reduceByKey(_ + _).sortByKey()
-
-    return res
-
-    //val x = rddFiltrado.mapValues((_, 1)).reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2)).mapValues{case (sum, count) => (1.0 * sum)/count}.collectAsMap()
-    //val x = rddFiltrado.reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2)).mapValues{ case (sum, count) => (1.0 * sum)/count}.collectAsMap()
-
-    //x.foreach(println)
-
-    //mapValues(x => (x, 1)).reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2)).mapValues(y => 1.0 * y._1 / y._2).collect
+    if (res.count() < 1) {
+      return sc.parallelize(List(("Empty", 0)))
+    } else {
+      return res
+    }
 
   }
 
@@ -74,11 +94,11 @@ object NivelIngresos {
     //val x = byClientes("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
     //x.foreach(println)
 
-    //val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
-    //y.foreach(println)
+    val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    y.foreach(println)
 
-    val z = montoPromedio("tablon.tsv", List("100070905"), "201512", "201512")
-    z.foreach(println)
+    //val z = montoPromedio("tablon.tsv", List("508843301"), "201501", "201512") //508843301
+    //z.foreach(println)
 
   }
 
