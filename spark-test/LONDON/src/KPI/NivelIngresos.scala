@@ -23,6 +23,10 @@ object NivelIngresos {
    */
 
   /**
+   * (BAJO,MEDIO,ALTO,MUY ALTO)
+   */
+
+  /**
    * Función que devuelve que no hay datos
    */
   def dataEmpty(): RDD[(String, Int)] = {
@@ -32,6 +36,10 @@ object NivelIngresos {
     return c
   }
 
+  /**
+   * Devuelve la cantidad de transacciones que existen por cada Nivel de Ingresos
+   * (Muy alto, alto, bajo y muy bajo)
+   */
   def byClientes(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Int)] = {
 
     val sc = new SparkContext("local[*]", "NivelIngresos")
@@ -61,10 +69,12 @@ object NivelIngresos {
     var rddFiltrado = r1.filter(x => (x._2 >= inicio && x._2 <= fin) && esta.exists(p => p.contains(x._1) && x._3 != "\\N"))
     val res = rddFiltrado.map(x => (x._2 + "-" + x._3, x._4.toFloat)).reduceByKey(_ + _).sortByKey()
 
+    var t = sc.parallelize(List(("BAJO", 0.00.toFloat)))
+    
     if (res.count() < 1) {
       return sc.parallelize(List(("Empty", 0)))
     } else {
-      return res
+      return res.union(t)
     }
 
   }
@@ -94,7 +104,7 @@ object NivelIngresos {
     //val x = byClientes("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
     //x.foreach(println)
 
-    val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201512", "201512")
     y.foreach(println)
 
     //val z = montoPromedio("tablon.tsv", List("508843301"), "201501", "201512") //508843301

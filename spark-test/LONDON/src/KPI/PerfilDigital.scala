@@ -71,14 +71,14 @@ object PerfilDigital {
   /**
    * Devuelve el promedio de compra según Perfil Tecnológico por un rango de fechas especificado
    */
-  def montoPromedio(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Double)] = {
+  def montoPromedio(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Float)] = {
 
     val sc = new SparkContext("local[*]", "PerfilDigital")
     val rdd = sc.textFile(ruta)
     val r1 = rdd.map(r => r.split("\t")).map(r => (r(6), r(25), r(48), r(12).toDouble))
 
     var rddFiltrado = r1.filter(x => (x._2 >= inicio && x._2 <= fin) && esta.exists(p => p.contains(x._1) && x._3 != "\\N")).map(r => (r._3, r._4))
-    val res = rddFiltrado.mapValues(x => (x, 1)).reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2)).mapValues(x => (x._1.toFloat / x._2.toFloat).toDouble)
+    val res = rddFiltrado.mapValues(x => (x, 1)).reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2)).mapValues(x => (x._1.toFloat / x._2.toFloat).toFloat)
 
     if (res.count() < 1) {
       return sc.parallelize(List(("Empty", 0)))
@@ -90,13 +90,13 @@ object PerfilDigital {
 
   def main(args: Array[String]) {
 
-    //val x = byClientes("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
-    //x.foreach(println)
+    val x = byClientes("tablon.tsv", List("100070905"), "201512", "201512")
+    x.foreach(println)
 
-    val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
-    y.foreach(println)
+    //val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    //y.foreach(println)
 
-    //val z = montoPromedio("tablon.tsv", List("100070905"), "201501", "201512")
+    //val z = montoPromedio("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
     //z.foreach(println)
 
   }
