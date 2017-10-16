@@ -1,6 +1,13 @@
+Console.highWaterMark=88000
 DEBUG.consoleOpenOnErr=false
 DEBUG.consoleOpenOnOut=false
 eclipse.preferences.version=1
 org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
+org.eclipse.debug.ui.activate_debug_view=false
+org.eclipse.debug.ui.activate_workbench=false
+org.eclipse.debug.ui.remove_all_breakpoints_prompt=false
+org.eclipse.debug.ui.remove_all_expressions_prompt=false
+org.eclipse.debug.ui.remove_breakpoints_from_container_prompt=false
+org.eclipse.debug.ui.reuse_editor=false
 org.eclipse.debug.ui.save_dirty_editors_before_launch=always
 preferredTargets=default\:default|
