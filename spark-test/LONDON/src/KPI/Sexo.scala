@@ -33,14 +33,14 @@ object Sexo {
 
   }
 
-  def evolucionCompras(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Double)] = {
+  def evolucionCompras(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Float)] = {
 
     val sc = new SparkContext("local[*]", "Sexo")
     val rdd = sc.textFile(ruta)
-    val r1 = rdd.map(r => r.split("\t")).map(r => (r(6), r(25), r(43), r(12).toDouble))
+    val r1 = rdd.map(r => r.split("\t")).map(r => (r(6), r(25), r(43), r(12).toFloat))
 
     var rddFiltrado = r1.filter(x => (x._2 >= inicio && x._2 <= fin) && esta.exists(p => p.contains(x._1) && x._3 != "\\N"))
-    val res = rddFiltrado.map(x => (x._2 + "-" + x._3, x._4.toDouble)).reduceByKey(_ + _).sortByKey()
+    val res = rddFiltrado.map(x => (x._2 + "-" + x._3, x._4.toFloat)).reduceByKey(_ + _).sortByKey()
     return res
 
   }

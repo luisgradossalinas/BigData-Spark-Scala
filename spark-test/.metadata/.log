@@ -2634,3 +2634,550 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.equinox.security 1 0 2017-10-16 17:30:16.550
 !MESSAGE New keyring password generated. 
+!SESSION 2017-10-18 15:13:53.900 -----------------------------------------------
+eclipse.buildId=4.6.1-vfinal-2017-06-09T11:19:56Z-Typesafe
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-10-18 15:22:12.611
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2017-10-18 15:22:21.742
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-18 15:22:21.742
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63c9070c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4446010,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-18 15:22:43.780
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lgradoss'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-10-18 16:51:42.882
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOrElse$extension(IScalaPresentationCompiler.scala:326)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification.org$scalaide$core$internal$decorators$semantichighlighting$classifier$SymbolClassification$$getSymbolInfo$1(SymbolClassification.scala:65)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anonfun$org$scalaide$core$internal$decorators$semantichighlighting$classifier$SymbolClassification$$findSymbolInfo$1$1.applyOrElse(SymbolClassification.scala:95)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anonfun$org$scalaide$core$internal$decorators$semantichighlighting$classifier$SymbolClassification$$findSymbolInfo$1$1.applyOrElse(SymbolClassification.scala:93)
+	at scala.collection.immutable.List.collect(List.scala:305)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification.org$scalaide$core$internal$decorators$semantichighlighting$classifier$SymbolClassification$$findSymbolInfo$1(SymbolClassification.scala:93)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:105)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1298)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1287)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseTrees$1(Trees.scala:2484)
+	at scala.reflect.api.Trees$Traverser.traverseTrees(Trees.scala:2484)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1288)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1298)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1287)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.$anonfun$itraverse$3(Trees.scala:1333)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1333)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseTrees$1(Trees.scala:2484)
+	at scala.reflect.api.Trees$Traverser.traverseTrees(Trees.scala:2484)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1288)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1298)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1284)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1287)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1287)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.$anonfun$itraverse$1(Trees.scala:1213)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.internal.Trees.traverseMemberDef$1(Trees.scala:1207)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1332)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseTrees$1(Trees.scala:2484)
+	at scala.reflect.api.Trees$Traverser.traverseTrees(Trees.scala:2484)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1238)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.$anonfun$itraverse$1(Trees.scala:1219)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.internal.Trees.traverseMemberDef$1(Trees.scala:1207)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1332)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$2(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$1(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.traverseStats(Trees.scala:2497)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1236)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1334)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.internal.Trees.$anonfun$itraverse$1(Trees.scala:1212)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.internal.Trees.traverseMemberDef$1(Trees.scala:1207)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1331)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:99)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$2(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$1(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.traverseStats(Trees.scala:2497)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1330)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1204)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification$$anon$1.traverse(SymbolClassification.scala:108)
+	at org.scalaide.core.internal.decorators.semantichighlighting.classifier.SymbolClassification.classifySymbols(SymbolClassification.scala:110)
+	at org.scalaide.ui.internal.editor.decorators.semantichighlighting.Presenter$SemanticHighlightingJob.$anonfun$performSemanticHighlighting$2(Presenter.scala:123)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.decorators.semantichighlighting.Presenter$SemanticHighlightingJob.$anonfun$performSemanticHighlighting$1(Presenter.scala:119)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.decorators.semantichighlighting.Presenter$SemanticHighlightingJob.performSemanticHighlighting(Presenter.scala:119)
+	at org.scalaide.ui.internal.editor.decorators.semantichighlighting.Presenter$SemanticHighlightingJob.run(Presenter.scala:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-11-06 10:59:13.094 -----------------------------------------------
+eclipse.buildId=4.6.1-vfinal-2017-06-09T11:19:56Z-Typesafe
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-11-06 11:06:05.981
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.osgi 2 0 2017-11-06 11:06:13.711
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-3,5,main]" timed out waiting (5183ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.6.1.201703071140-r [98]". To avoid deadlock, thread "Thread[Worker-3,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="4.6.1.201703071140-r"; osgi.identity="org.eclipse.egit.ui"; singleton:="true" [id=98] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	... 13 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface 2 0 2017-11-06 11:06:17.308
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-11-06 11:06:17.308
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@64b56bd5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@531571e1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-06 11:06:59.221
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lgradoss'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-06 11:22:59.003
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$25(ScalaHoverImpl.scala:227)
+	at scala.Option$WithFilter.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$lzycompute$1(ScalaHoverImpl.scala:226)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$1(ScalaHoverImpl.scala:205)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$2(ScalaHoverImpl.scala:238)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$1(ScalaHoverImpl.scala:103)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:101)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.super$getHoverInfo2(TextHoverFactory.scala:53)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$6(TextHoverFactory.scala:53)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$1(TextHoverFactory.scala:51)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+!SESSION 2017-11-07 10:05:00.041 -----------------------------------------------
+eclipse.buildId=4.6.1-vfinal-2017-06-09T11:19:56Z-Typesafe
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-11-07 11:18:45.008
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2017-11-07 11:18:52.990
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-11-07 11:18:52.990
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3ec6591b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7a17c32f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-07 11:19:12.185
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lgradoss'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-07 12:07:03.979
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\Sexo.scala at: offset: 575, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-07 12:07:13.578
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\prueba.scala at: offset: 356, length: 0
+!SESSION 2017-11-08 12:34:17.974 -----------------------------------------------
+eclipse.buildId=4.6.1-vfinal-2017-06-09T11:19:56Z-Typesafe
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2017-11-08 12:34:41.457
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-11-08 12:34:41.457
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11c246f7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@49bc9953,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-08 12:35:03.519
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lgradoss'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-11-08 14:15:58.569 -----------------------------------------------
+eclipse.buildId=4.6.1-vfinal-2017-06-09T11:19:56Z-Typesafe
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2017-11-08 14:19:20.412
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-11-08 14:19:20.412
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79bcbc37,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@51f73460,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-08 14:19:38.224
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\lgradoss'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.ui 2 0 2017-11-08 14:55:56.730
+!MESSAGE The 'Scala Completion Proposal Computer' proposal computer from the 'org.scala-ide.sdt.core' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-08 15:11:16.666
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\prueba.scala at: offset: 216, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-08 15:11:56.056
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\prueba.scala at: offset: 340, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-08 15:24:35.410
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\NivelIngresos.scala at: offset: 2105, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-08 15:40:41.449
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\df.scala at: offset: 377, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-08 15:51:33.378
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.$anonfun$mkCompletionProposal$7(ScalaPresentationCompiler.scala:417)
+	at org.scalaide.ui.internal.completion.ScalaCompletionProposalImpl.getAdditionalProposalInfo(ScalaCompletionProposalImpl.scala:109)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-08 16:23:41.352
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\dframe.scala at: offset: 589, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-08 16:25:43.673
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$25(ScalaHoverImpl.scala:227)
+	at scala.Option$WithFilter.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$lzycompute$1(ScalaHoverImpl.scala:226)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$1(ScalaHoverImpl.scala:205)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$2(ScalaHoverImpl.scala:238)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$1(ScalaHoverImpl.scala:103)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:101)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.super$getHoverInfo2(TextHoverFactory.scala:53)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$6(TextHoverFactory.scala:53)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$1(TextHoverFactory.scala:51)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-08 17:26:28.031
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\dframe.scala at: offset: 852, length: 0

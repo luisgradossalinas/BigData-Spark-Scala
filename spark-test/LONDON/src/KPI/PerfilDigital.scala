@@ -90,7 +90,7 @@ object PerfilDigital {
 
   def main(args: Array[String]) {
 
-    val x = byClientes("tablon.tsv", List("100070905"), "201512", "201512")
+    val x = byClientes("tablon.tsv", List("100070905"), "201510", "201512")
     x.foreach(println)
 
     //val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")

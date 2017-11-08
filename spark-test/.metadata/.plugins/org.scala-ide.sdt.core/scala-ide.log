@@ -3399,3 +3399,145 @@ java.util.NoSuchElementException: key not found: D:\Mis Scripts - Linux\Pruebas-
 2017-10-11 11:01:01,591  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
 2017-10-16 17:20:18,588 ERROR [Worker-4] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.jgit.util.FS).
 2017-10-16 17:20:18,590 ERROR [Worker-4] - System.err - log4j:WARN Please initialize the log4j system properly.
+2017-10-18 15:22:47,223 ERROR [Worker-4] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.jgit.util.FS).
+2017-10-18 15:22:47,237 ERROR [Worker-4] - System.err - log4j:WARN Please initialize the log4j system properly.
+2017-11-06 11:07:01,049 ERROR [Worker-2] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.jgit.util.FS).
+2017-11-06 11:07:01,051 ERROR [Worker-2] - System.err - log4j:WARN Please initialize the log4j system properly.
+2017-11-06 11:23:02,062 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:02,087 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:02,087 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:02,087 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:06,273  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-06 11:23:11,014 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:11,016 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:34,544 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:34,545 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:34,545 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:23:34,545 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,985 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,985 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,985 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,988 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,988 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,988 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,988 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,989 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,989 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,989 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:03,989 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:38,657 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:38,657 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-06 11:24:45,182  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-07 11:19:13,627 ERROR [Worker-3] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.jgit.util.FS).
+2017-11-07 11:19:13,629 ERROR [Worker-3] - System.err - log4j:WARN Please initialize the log4j system properly.
+2017-11-07 12:03:01,409 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-07 12:03:01,452 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-07 12:03:01,458 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-07 12:03:45,345  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-07 12:07:16,360 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-07 12:07:16,362 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-07 12:07:16,362 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-07 12:08:14,139  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 12:35:04,113 ERROR [Worker-1] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.jgit.util.FS).
+2017-11-08 12:35:04,115 ERROR [Worker-1] - System.err - log4j:WARN Please initialize the log4j system properly.
+2017-11-08 14:19:38,795 ERROR [Worker-2] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.jgit.util.FS).
+2017-11-08 14:19:38,796 ERROR [Worker-2] - System.err - log4j:WARN Please initialize the log4j system properly.
+2017-11-08 14:55:26,996 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 14:55:27,000 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 14:55:27,001 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 14:55:27,003 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 14:55:27,003 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 14:55:27,003 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 14:55:27,004 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 14:55:27,007 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:12:07,226  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:24:35,701 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:24:35,702 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:24:35,702 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:25:03,146 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:25:03,147 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:25:03,147 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:26:54,400  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:26:54,606  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:26:54,807  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:34:34,041  WARN [ModalContext] - ScalaProject - Project DFrame has platform default sourceLevel.
+2017-11-08 15:34:34,047  WARN [ModalContext] - ScalaProject - Project DFrame runs on platform default installation.
+2017-11-08 15:34:36,528  WARN [Worker-26] - ScalaProject - Project DFrame has platform default sourceLevel.
+2017-11-08 15:34:36,529  WARN [Worker-26] - ScalaProject - Project DFrame runs on platform default installation.
+2017-11-08 15:37:05,966 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:37:05,982 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:37:05,982 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:37:05,982 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:39:18,966 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:39:18,966 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:39:18,967 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:39:18,968 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:39:18,969 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:39:18,969 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:39:18,971 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:40:06,005  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,053  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,065  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,256  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,259  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,289  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,460  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,483  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,492  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:40:06,696  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 15:50:12,010 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 15:50:12,022 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:24:16,830 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:24:16,871 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:24:16,871 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:24:16,871 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:25:46,017 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:25:46,017 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:25:46,017 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:26:13,268 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:26:13,269 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:26:13,269 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:27:05,752  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 16:27:11,906 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:27:11,913 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:27:11,914 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:27:11,916 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 16:43:37,668  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:03:10,152  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:16:24,752 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:16:24,756 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:16:24,757 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:25:46,743 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:25:46,744 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:25:46,744 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:25:46,744 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:25:46,745 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:25:46,745 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:25:46,745 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:25:46,764 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:28:49,631 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:28:49,632 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:28:49,632 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:28:49,632 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:28:49,632 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:28:49,632 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:28:49,633 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:28:52,024 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:45:19,291 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:45:19,298 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:45:19,300 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:47:53,296 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:47:53,297 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:47:53,297 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-11-08 17:57:50,629  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:50,647  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:50,684  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:50,686  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:50,842  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:50,854  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:50,894  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:50,894  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:51,074  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:51,080  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:51,094  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-11-08 17:57:51,100  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
