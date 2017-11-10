@@ -1,0 +1,72 @@
+package TestDataFrame
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+
+object SexoFrame {
+  /*
+   * Data del Tablón
+   * 17 => RUC
+   * 6 => CODESTABLECIMIENTO
+   * 12 => MTOTRANSACCION
+   * 14 => CODCLAVECIC_CLIENTE
+   * 25 => CODMES
+   * 43 => SEXO_CLIENTE
+   * 46 => RANGO_SUELDO
+   * 47 => TIPUSODIGITAL
+   * 48 => DESTIPUSODIGITAL
+   * 57 => RANGO_EDAD
+   */
+
+  var sc = new SparkContext("local[*]", "SexoFrame")
+  var sqlContext = new org.apache.spark.sql.SQLContext(sc)
+  
+  def byClientes(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
+    
+    //sc = new SparkContext("local[*]", "SexoFrame")
+    //sqlContext = new org.apache.spark.sql.SQLContext(sc)
+
+    val rddTablon = this.sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(43)))
+    val cabeceras = "CODESTABLECIMIENTO CODMES SEXO_CLIENTE"
+    val camposDF = cabeceras.split(" ").map(fieldName => StructField(fieldName, StringType, nullable = true))
+    val schema = StructType(camposDF)
+
+    val tablonDF = this.sqlContext.createDataFrame(rddTablon, schema)
+
+    return tablonDF.filter(tablonDF("CODESTABLECIMIENTO") isin ("100070934", "100070905")).filter(tablonDF("CODMES").between(inicio, fin)).groupBy("SEXO_CLIENTE").count()
+
+  }
+  
+  def evolucionCompras(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Float)] = {
+
+    val sc = new SparkContext("local[*]", "SexoFrame")
+    val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+    
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(43)))
+    
+    val rdd = sc.textFile(ruta)
+    val r1 = rdd.map(r => r.split("\t")).map(r => (r(6), r(25), r(43), r(12).toFloat))
+
+    var rddFiltrado = r1.filter(x => (x._2 >= inicio && x._2 <= fin) && esta.exists(p => p.contains(x._1) && x._3 != "\\N"))
+    val res = rddFiltrado.map(x => (x._2 + "-" + x._3, x._4.toFloat)).reduceByKey(_ + _).sortByKey()
+    return res
+
+  }
+
+  def main(args: Array[String]) {
+
+    val x = byClientes("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    x.show()
+
+    //val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    //y.foreach(println)
+    
+    
+  }
+
+}

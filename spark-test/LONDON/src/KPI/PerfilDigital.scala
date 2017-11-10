@@ -93,11 +93,11 @@ object PerfilDigital {
     val x = byClientes("tablon.tsv", List("100070905"), "201510", "201512")
     x.foreach(println)
 
-    //val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
-    //y.foreach(println)
+    val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    y.foreach(println)
 
-    //val z = montoPromedio("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
-    //z.foreach(println)
+    val z = montoPromedio("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    z.foreach(println)
 
   }
 

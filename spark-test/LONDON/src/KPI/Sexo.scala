@@ -58,6 +58,7 @@ object Sexo {
     val res = rddFiltrado.map(x => (x._1, x._2.toDouble)).reduceByKey(_ + _).sortByKey()
 
     return res
+    
 
     //val x = rddFiltrado.mapValues((_, 1)).reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2)).mapValues{case (sum, count) => (1.0 * sum)/count}.collectAsMap()
     //val x = rddFiltrado.reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2)).mapValues{ case (sum, count) => (1.0 * sum)/count}.collectAsMap()
@@ -70,7 +71,7 @@ object Sexo {
 
   def main(args: Array[String]) {
 
-    //val x = byClientes("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    //val x = byClientes("tablon.tsv", List("100070934","100070905"), "201501", "201512")
     //x.foreach(println)
 
     val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
