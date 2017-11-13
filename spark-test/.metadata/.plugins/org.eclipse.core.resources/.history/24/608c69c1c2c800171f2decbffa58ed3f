@@ -1,0 +1,92 @@
+package TestDataFrame
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
+object NConceptos {
+
+  /*
+   * 17 => RUC
+   * 6 => CODESTABLECIMIENTO
+   * 12 => MTOTRANSACCION
+   * 14 => CODCLAVECIC_CLIENTE
+   * 25 => CODMES
+   * 43 => SEXO_CLIENTE
+   * 46 => RANGO_SUELDO
+   * 47 => TIPUSODIGITAL
+   * 48 => DESTIPUSODIGITAL
+   * 57 => RANGO_EDAD
+   */
+
+  var spark = SparkSession
+    .builder
+    .appName("PocDF")
+    .master("local[*]")
+    .getOrCreate()
+
+  def byClientes2Conceptos(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(43), r(46)))
+    val concepto1 = conceptos.split(" ")(0)
+    val concepto2 = conceptos.split(" ")(1)
+    val cabeceras = "CODESTABLECIMIENTO CODMES "+conceptos
+ 
+    val camposDF = cabeceras.split(" ").map(fieldName => StructField(fieldName, StringType, nullable = true))
+    val schema = StructType(camposDF)
+
+    val tablonDF = spark.createDataFrame(rddTablon, schema)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) && (!tablonDF(concepto2).equalTo("\\N")) && (tablonDF("CODMES")
+      .between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2)
+      .agg(count("CODMES").as("TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2)
+
+  }
+  
+  def byClientes3Conceptos(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(43), r(46), r(48)))
+    val concepto1 = conceptos.split(" ")(0)
+    val concepto2 = conceptos.split(" ")(1)
+    val concepto3 = conceptos.split(" ")(2)
+    val cabeceras = "CODESTABLECIMIENTO CODMES "+conceptos
+ 
+    val camposDF = cabeceras.split(" ").map(fieldName => StructField(fieldName, StringType, nullable = true))
+    val schema = StructType(camposDF)
+
+    val tablonDF = spark.createDataFrame(rddTablon, schema)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) && (!tablonDF(concepto2).equalTo("\\N")) && (!tablonDF(concepto3).equalTo("\\N"))
+       && (tablonDF("CODMES")
+      .between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2, concepto3)
+      .agg(count("CODMES").as("TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2, concepto3)
+
+  }
+
+  def main(args: Array[String]) {
+
+    //val kpiCalculo2 = byClientes2Conceptos("tablon.tsv", List("100070934", "100070905"), "201501", "201512","SEXO_CLIENTE RANGO_SUELDO")
+    //kpiCalculo2.show()
+    
+    //val kpiCalculo3 = byClientes3Conceptos("tablon.tsv", List("100070934", "100070905"), "201501", "201512","SEXO_CLIENTE RANGO_SUELDO DESTIPUSODIGITAL")
+    //kpiCalculo3.show()
+
+    val lista = List(("SEXO_CLIENTE",43))
+    println(lista.filter(x => (x._1 == "SEXO_CLIENTE")).map(f => f._2).toString())
+    
+    //r1.filter(x => (x._2 >= inicio && x._2 <= fin)
+    
+    
+    
+  }
+
+}

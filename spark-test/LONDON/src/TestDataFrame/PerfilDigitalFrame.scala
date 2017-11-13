@@ -7,13 +7,14 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
 import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
 
 object PerfilDigitalFrame {
 
   /*
    * Data del Tablón
    * 17 => RUC
-   * 6 => CODESTABLECIMIENTO
+   * 6  => CODESTABLECIMIENTO
    * 12 => MTOTRANSACCION
    * 14 => CODCLAVECIC_CLIENTE
    * 25 => CODMES
@@ -28,7 +29,6 @@ object PerfilDigitalFrame {
     .builder
     .appName("PocDF")
     .master("local[*]")
-    .config("spark.sql.warehouse.dir", "file:///C:/temp") // Necessary to work around a Windows bug in Spark 2.0.0; omit if you're not on Windows.
     .getOrCreate()
 
   def byClientes(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
@@ -39,7 +39,8 @@ object PerfilDigitalFrame {
     val schema = StructType(camposDF)
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
-    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("DESTIPUSODIGITAL").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin))).groupBy("DESTIPUSODIGITAL").count()
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("DESTIPUSODIGITAL").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("DESTIPUSODIGITAL").agg(count("DESTIPUSODIGITAL").as("TOTAL"))
 
   }
 
@@ -55,7 +56,7 @@ object PerfilDigitalFrame {
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("DESTIPUSODIGITAL").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
-      .groupBy("CODMES", "DESTIPUSODIGITAL").sum("MTOTRANSACCION").orderBy("CODMES", "DESTIPUSODIGITAL")
+      .groupBy("CODMES", "DESTIPUSODIGITAL").agg(sum("MTOTRANSACCION").as("MONTO_TOTAL")).orderBy("CODMES","DESTIPUSODIGITAL")
 
   }
 
@@ -71,7 +72,7 @@ object PerfilDigitalFrame {
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("DESTIPUSODIGITAL").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
-      .groupBy("CODMES","DESTIPUSODIGITAL").avg("MTOTRANSACCION").orderBy("CODMES", "DESTIPUSODIGITAL")
+      .groupBy("CODMES","DESTIPUSODIGITAL").agg(avg("MTOTRANSACCION").as("MONTO_PROMEDIO")).orderBy("CODMES","DESTIPUSODIGITAL")
 
   }
 

@@ -7,6 +7,7 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
 import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
 
 object NivelIngresosFrame {
   
@@ -28,7 +29,6 @@ object NivelIngresosFrame {
       .builder
       .appName("PocDF")
       .master("local[*]")
-      .config("spark.sql.warehouse.dir", "file:///C:/temp") // Necessary to work around a Windows bug in Spark 2.0.0; omit if you're not on Windows.
       .getOrCreate()
 
   def byClientes(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
@@ -39,14 +39,14 @@ object NivelIngresosFrame {
     val schema = StructType(camposDF)
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
-    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("RANGO_SUELDO").equalTo("\\N"))  && (tablonDF("CODMES").between(inicio, fin))).groupBy("RANGO_SUELDO").count()
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("RANGO_SUELDO").equalTo("\\N"))  && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("RANGO_SUELDO").agg(count("RANGO_SUELDO").as("TOTAL"))
 
   }
 
   def evolucionCompras(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
 
     val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(46), r(12).toDouble))    
-    
     val schema = new StructType()
       .add("CODESTABLECIMIENTO", StringType, true)
       .add("CODMES", StringType, true)
@@ -55,14 +55,12 @@ object NivelIngresosFrame {
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("RANGO_SUELDO").equalTo("\\N")) && tablonDF("CODMES").between(inicio, fin))
-      .groupBy("CODMES","RANGO_SUELDO").sum("MTOTRANSACCION").orderBy("CODMES","RANGO_SUELDO")
-
+      .groupBy("CODMES","RANGO_SUELDO").agg(sum("MTOTRANSACCION").as("MONTO_TOTAL")).orderBy("CODMES","RANGO_SUELDO")
   }
   
   def montoPromedio(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
 
     val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(46), r(12).toDouble))
-
     val schema = new StructType()
       .add("CODESTABLECIMIENTO", StringType, true)
       .add("CODMES", StringType, true)
@@ -71,7 +69,7 @@ object NivelIngresosFrame {
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("RANGO_SUELDO").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
-      .groupBy("CODMES","RANGO_SUELDO").avg("MTOTRANSACCION").orderBy("CODMES", "RANGO_SUELDO")
+      .groupBy("CODMES","RANGO_SUELDO").agg(avg("MTOTRANSACCION").as("MONTO_PROMEDIO")).orderBy("CODMES", "RANGO_SUELDO")
 
   }
 

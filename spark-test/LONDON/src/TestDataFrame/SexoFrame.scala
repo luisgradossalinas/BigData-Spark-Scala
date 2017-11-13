@@ -13,7 +13,7 @@ object SexoFrame {
   /*
    * Data del Tablón
    * 17 => RUC
-   * 6 => CODESTABLECIMIENTO
+   * 6  => CODESTABLECIMIENTO
    * 12 => MTOTRANSACCION
    * 14 => CODCLAVECIC_CLIENTE
    * 25 => CODMES
@@ -28,7 +28,6 @@ object SexoFrame {
     .builder
     .appName("PocDF")
     .master("local[*]")
-    .config("spark.sql.warehouse.dir", "file:///C:/temp") // Necessary to work around a Windows bug in Spark 2.0.0; omit if you're not on Windows.
     .getOrCreate()
 
   def byClientes(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
@@ -39,7 +38,8 @@ object SexoFrame {
     val schema = StructType(camposDF)
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
-    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("SEXO_CLIENTE").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin))).groupBy("SEXO_CLIENTE").count()
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("SEXO_CLIENTE").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("SEXO_CLIENTE").agg(count("SEXO_CLIENTE").as("TOTAL"))
 
   }
 
@@ -55,7 +55,7 @@ object SexoFrame {
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("SEXO_CLIENTE").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
-      .groupBy("CODMES", "SEXO_CLIENTE").sum("MTOTRANSACCION").as("Total").orderBy("CODMES", "SEXO_CLIENTE")
+      .groupBy("CODMES", "SEXO_CLIENTE").agg(sum("MTOTRANSACCION").as("MONTO_TOTAL")).orderBy("CODMES", "SEXO_CLIENTE")
 
   }
   
@@ -71,8 +71,8 @@ object SexoFrame {
 
     val tablonDF = spark.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("SEXO_CLIENTE").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
-      .groupBy("CODMES","SEXO_CLIENTE").avg("MTOTRANSACCION").orderBy("CODMES", "SEXO_CLIENTE")
-
+      .groupBy("CODMES","SEXO_CLIENTE").agg(avg("MTOTRANSACCION").as("MONTO_PROMEDIO")).orderBy("CODMES", "SEXO_CLIENTE")
+    
   }
 
   def main(args: Array[String]) {

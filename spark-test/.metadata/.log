@@ -3787,3 +3787,366 @@ java.lang.Throwable
 
 !ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 01:21:50.710
 !MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 2944, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:00:30.128
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 3104, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:00:30.161
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 3101, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:00:43.514
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 3121, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:00:44.759
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 3135, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:00:58.674
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 3160, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:20:02.491
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 2246, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:29:07.455
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 1509, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:29:08.878
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\SexoFrame.scala at: offset: 1527, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:48:12.826
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\PerfilDigitalFrame.scala at: offset: 3101, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:49:25.068
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\PerfilDigitalFrame.scala at: offset: 3216, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:50:50.137
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\PerfilDigitalFrame.scala at: offset: 3231, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:52:33.332
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\PerfilDigitalFrame.scala at: offset: 3216, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 10:52:56.948
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\PerfilDigitalFrame.scala at: offset: 3229, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 11:01:32.245
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\PerfilDigitalFrame.scala at: offset: 1411, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 11:01:38.244
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 1504, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 11:01:39.237
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 1520, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 11:10:12.098
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOrElse$extension(IScalaPresentationCompiler.scala:326)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.$anonfun$buildStructure$2(ScalaCompilationUnit.scala:123)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:12)
+	at org.scalaide.util.Utils$.debugTimed(Utils.scala:28)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.$anonfun$buildStructure$1(ScalaCompilationUnit.scala:120)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.$anonfun$buildStructure$1$adapted(ScalaCompilationUnit.scala:113)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.buildStructure(ScalaCompilationUnit.scala:113)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.buildStructure$(ScalaCompilationUnit.scala:110)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.buildStructure(ScalaSourceFile.scala:71)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.makeConsistent(ScalaSourceFile.scala:123)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.$anonfun$reconciled$4(ScalaSourceFileEditor.scala:375)
+	at org.scalaide.util.Utils$.debugTimed(Utils.scala:28)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:370)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 11:10:29.619
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 3112, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 11:10:29.701
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 3112, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 15:43:22.006
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 291, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 15:54:35.947
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 832, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 15:57:26.091
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 2982, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 15:58:40.925
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 683, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 16:03:17.841
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 1236, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 16:03:17.895
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 1260, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 16:03:18.636
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 1260, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 16:36:53.645
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 1238, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 16:45:25.099
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 2130, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 17:07:17.420
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NivelIngresosFrame.scala at: offset: 1975, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-10 17:07:31.849
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 2543, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-12 20:49:13.485
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 486, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 09:22:56.768
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 290, length: 0
+
+!ENTRY org.eclipse.jdt.core 4 4 2017-11-13 09:24:41.805
+!MESSAGE File not found: '/LONDON/src/TestDataFrame/RangoEdadFrame.scala'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/LONDON/src/TestDataFrame/RangoEdadFrame.scala' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:275)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1190)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:652)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.super$getContents(ScalaSourceFile.scala:155)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.$anonfun$getContents$2(ScalaSourceFile.scala:155)
+	at scala.util.control.Exception$Catch.apply(Exception.scala:224)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.getContents(ScalaSourceFile.scala:155)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.lastSourceMap(ScalaCompilationUnit.scala:79)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.lastSourceMap$(ScalaCompilationUnit.scala:78)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.lastSourceMap(ScalaSourceFile.scala:71)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.$anonfun$filesDeleted$3(ScalaPresentationCompiler.scala:289)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:234)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:227)
+	at scala.collection.immutable.List.map(List.scala:295)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.filesDeleted(ScalaPresentationCompiler.scala:289)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$19(ScalaPlugin.scala:334)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$19$adapted(ScalaPlugin.scala:334)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$18(ScalaPlugin.scala:334)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$17(ScalaPlugin.scala:332)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$17$adapted(ScalaPlugin.scala:330)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:120)
+	at org.scalaide.core.internal.ScalaPlugin.elementChanged(ScalaPlugin.scala:330)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1486)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1462)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2074)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:529)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:262)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2017-11-13 09:24:41.839
+!MESSAGE Resource '/LONDON/src/TestDataFrame/RangoEdadFrame.scala' does not exist.
+
+!ENTRY org.scala-ide.sdt.core 2 0 2017-11-13 10:41:31.592
+!MESSAGE Preference scala.compiler.sourceLevel was uninitialized for PruebaConcepto, setting default to 2.12.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 10:41:31.619
+!MESSAGE Adding  -Xsource:2.11 -Ymacro-expand:none to compiler arguments of PruebaConcepto because of: requested Scala Installation change
+
+!ENTRY org.scala-ide.sdt.core 4 0 2017-11-13 10:41:35.994
+!MESSAGE java.lang.IllegalArgumentException: Argument not valid
+
+!ENTRY org.eclipse.jface 4 2 2017-11-13 10:41:37.753
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:354)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3935)
+	at org.eclipse.jface.dialogs.DialogPage.setVisible(DialogPage.java:460)
+	at org.eclipse.jface.preference.PreferenceDialog.selectCurrentPageAgain(PreferenceDialog.java:957)
+	at org.eclipse.jface.preference.PreferenceDialog$5.handleError(PreferenceDialog.java:642)
+	at org.eclipse.jface.preference.PreferenceDialog$5.lambda$0(PreferenceDialog.java:658)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.preference.PreferenceDialog$5.selectionChanged(PreferenceDialog.java:653)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:878)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:875)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1244)
+	at org.eclipse.jface.viewers.StructuredViewer$5.widgetSelected(StructuredViewer.java:1270)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:265)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:259)
+	at org.eclipse.jface.util.OpenStrategy$1.lambda$1(OpenStrategy.java:431)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4211)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3827)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:157)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 10:43:19.339
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\PerfilDigitalFrame.scala at: offset: 209, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 10:43:23.004
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 110, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 10:58:07.690
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 1158, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 10:58:11.652
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 1152, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 11:10:35.615
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$25(ScalaHoverImpl.scala:227)
+	at scala.Option$WithFilter.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$lzycompute$1(ScalaHoverImpl.scala:226)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$1(ScalaHoverImpl.scala:205)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$2(ScalaHoverImpl.scala:238)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$1(ScalaHoverImpl.scala:103)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:101)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.super$getHoverInfo2(TextHoverFactory.scala:53)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$6(TextHoverFactory.scala:53)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$1(TextHoverFactory.scala:51)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 12:08:39.805
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 23, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 12:22:05.269
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\RangoEdadFrame.scala at: offset: 1373, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 12:24:07.482
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 1551, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 12:24:07.492
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 1569, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 14:19:37.744
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 1508, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 14:19:37.799
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 1585, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 15:29:10.619
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\test.scala at: offset: 4681, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 15:30:39.743
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\test.scala at: offset: 4802, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 16:00:53.651
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 2422, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 16:00:53.668
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 2407, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 17:30:50.446
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\KPI\Sexo.scala at: offset: 907, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 17:48:27.511
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 1567, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 18:03:35.512
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 4860, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 18:13:35.640
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 6668, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 18:18:25.054
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 8487, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-13 18:19:28.209
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\TestDataFrame\NConceptos.scala at: offset: 3813, length: 0
