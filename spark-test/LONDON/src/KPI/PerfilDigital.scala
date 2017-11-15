@@ -21,7 +21,6 @@ object PerfilDigital {
    * 48 => DESTIPUSODIGITAL
    * 57 => RANGO_EDAD
    */
-
   /**
    * Función que devuelve que no hay datos
    */
@@ -38,7 +37,7 @@ object PerfilDigital {
    * (Muy Tecnológico, Poco Tecnológico, No Tecnológico)
    */
   def byClientes(ruta: String, esta: List[String], inicio: String, fin: String): RDD[(String, Int)] = {
-
+    
     val sc = new SparkContext("local[*]", "PerfilDigital")
     val rdd = sc.textFile(ruta)
     val r1 = rdd.map(r => r.split("\t")).map(r => (r(6), r(25), r(48)))

@@ -33,6 +33,8 @@ object NivelIngresos {
 
     val sc = new SparkContext("local[*]", "NivelIngresos")
     val c = sc.parallelize(List(("Empty", 0)))
+    
+    
     return c
   }
 

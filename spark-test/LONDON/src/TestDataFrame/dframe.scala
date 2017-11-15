@@ -15,6 +15,7 @@ object dframe {
     val sc = new SparkContext("local[*]", "dframe")
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 
+    
     val peopleRDD = sc.textFile("tablon.tsv")
     //Definir el nombre de los campos que tendrá el DataFrame
     val schemaString = "CODESTABLECIMIENTO CODMES SEXO_CLIENTE"
