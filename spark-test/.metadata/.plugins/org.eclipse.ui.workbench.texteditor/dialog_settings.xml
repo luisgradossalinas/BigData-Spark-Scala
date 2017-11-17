@@ -2,22 +2,24 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="groupB" key="selection"/>
+		<item value="sqlContext.createDataFrame" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="spark.createDataFrame"/>
+			<item value="s"/>
+			<item value="spark.sparkContext"/>
 			<item value="groupb"/>
 			<item value="union"/>
 			<item value="sortByKey"/>
 			<item value="sort"/>
 			<item value="convertDate"/>
-			<item value="obtenerVisitas"/>
-			<item value="contains"/>
-			<item value="array"/>
 		</list>
 		<list key="replacehistory">
+			<item value="sqlContext.createDataFrame"/>
+			<item value="sc"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -1,7 +1,6 @@
 package Mi_Rubro
 
 import org.apache.spark._
-import org.apache.spark.SparkContext._
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.types._
 import org.apache.spark.sql._
@@ -9,12 +8,12 @@ import org.apache.spark.sql.functions._
 
 object MiRubroDepartamento {
 
-  val sc = new SparkContext("local[*]", "MiRubro")
-
+  val sc = new SparkContext("local[*]", "MiRubroDepartamento")
   val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
+  
   val tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON where (codmes >= 201701 and codmes <= 201702) and rubro_bcp is not null")
 
-  def KPI_RubroDepartamentoMesAnual(departamento: String, rubro: String, fecha: String): DataFrame = {
+  def KPI_RubroDepartamentoGeneralMesAnual(departamento: String, rubro: String, fecha: String): DataFrame = {
 
     return tablonDF.filter((tablonDF("DEPARTAMENTO_ESTABLEC").equalTo(departamento)) && (tablonDF("RUBRO_BCP").equalTo(rubro)) 
         && (!tablonDF("CODCLAVECIC_CLIENTE").equalTo("null"))
@@ -31,7 +30,24 @@ object MiRubroDepartamento {
 
   }
   
-  def KPI_RubroDepartamentolDiaMes(departamento: String, rubro: String, fecha: String): DataFrame = {
+  def KPI_RubroDepartamentoProcedenciaMesAnual(departamento: String, rubro: String, fecha: String): DataFrame = {
+
+    return tablonDF.filter((tablonDF("RUBRO_BCP").equalTo(rubro)) && (!tablonDF("CODCLAVECIC_CLIENTE").equalTo("null"))
+      && (tablonDF("DEPARTAMENTO_ESTABLEC").equalTo(departamento))
+      && (tablonDF("CODMES").substr(1, 4).equalTo(fecha)))
+      .groupBy("CODMES", "DISTRITO_ESTABLEC")
+      .agg(
+        countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
+        count("RUBRO_BCP").as("CANT_TOT_TRX"),
+        avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
+        sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
+        (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
+        (count("RUBRO_BCP") / countDistinct("CODCLAVECIC_CLIENTE")).as("PROM_TRX_CLI"))
+      .orderBy("CODMES", "DISTRITO_ESTABLEC")
+
+  }
+  
+  def KPI_RubroDepartamentoGenerallDiaMes(departamento: String, rubro: String, fecha: String): DataFrame = {
 
     return tablonDF.filter((tablonDF("DEPARTAMENTO_ESTABLEC").equalTo(departamento)) && (tablonDF("RUBRO_BCP").equalTo(rubro))
         && (!tablonDF("CODCLAVECIC_CLIENTE").equalTo("null"))
@@ -50,9 +66,9 @@ object MiRubroDepartamento {
 
   def main(args: Array[String]) {
 
-    KPI_RubroDepartamentoMesAnual("AREQUIPA","SERVICIOS DENTALES", "2017").show()
-    KPI_RubroDepartamentolDiaMes("AREQUIPA","SERVICIOS DENTALES", "201701").show()
-
+    KPI_RubroDepartamentoGeneralMesAnual("AREQUIPA","SERVICIOS DENTALES", "2017").show()
+    KPI_RubroDepartamentoGenerallDiaMes("AREQUIPA","SERVICIOS DENTALES", "201701").show()
+    KPI_RubroDepartamentoProcedenciaMesAnual("AREQUIPA","SERVICIOS DENTALES", "2017").show()
 
   }
 

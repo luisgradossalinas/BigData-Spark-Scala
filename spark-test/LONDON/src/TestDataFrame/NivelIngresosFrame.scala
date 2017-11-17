@@ -1,16 +1,13 @@
 package TestDataFrame
 
 import org.apache.spark._
-import org.apache.spark.SparkContext._
-import org.apache.log4j._
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
 
 object NivelIngresosFrame {
-  
+
   /*
    * Data del Tablón
    * 17 => RUC
@@ -25,68 +22,71 @@ object NivelIngresosFrame {
    * 57 => RANGO_EDAD
    */
 
-    var spark = SparkSession
-      .builder
-      .appName("PocDF")
-      .master("local[*]")
-      .getOrCreate()
+  /*
+  var spark = SparkSession
+    .builder
+    .appName("PocDF")
+    .master("local[*]")
+    .getOrCreate()
+    * */
+    
+
+  var sc = new SparkContext("local[*]", "NivelIngresosFrame")
+  var sqlContext = new org.apache.spark.sql.SQLContext(sc)
 
   def byClientes(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
 
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(46)))
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(46)))
     val cabeceras = "CODESTABLECIMIENTO CODMES RANGO_SUELDO"
     val camposDF = cabeceras.split(" ").map(fieldName => StructField(fieldName, StringType, nullable = true))
     val schema = StructType(camposDF)
 
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
-    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("RANGO_SUELDO").equalTo("\\N"))  && (tablonDF("CODMES").between(inicio, fin)))
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("RANGO_SUELDO").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
       .groupBy("RANGO_SUELDO").agg(count("RANGO_SUELDO").as("TOTAL"))
 
   }
 
   def evolucionCompras(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
 
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(46), r(12).toDouble))    
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(46), r(12).toDouble))
     val schema = new StructType()
       .add("CODESTABLECIMIENTO", StringType, true)
       .add("CODMES", StringType, true)
       .add("RANGO_SUELDO", StringType, true)
       .add("MTOTRANSACCION", DoubleType, true)
 
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("RANGO_SUELDO").equalTo("\\N")) && tablonDF("CODMES").between(inicio, fin))
-      .groupBy("CODMES","RANGO_SUELDO").agg(sum("MTOTRANSACCION").as("MONTO_TOTAL")).orderBy("CODMES","RANGO_SUELDO")
+      .groupBy("CODMES", "RANGO_SUELDO").agg(sum("MTOTRANSACCION").as("MONTO_TOTAL")).orderBy("CODMES", "RANGO_SUELDO")
   }
-  
+
   def montoPromedio(ruta: String, esta: List[String], inicio: String, fin: String): DataFrame = {
 
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(46), r(12).toDouble))
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(46), r(12).toDouble))
     val schema = new StructType()
       .add("CODESTABLECIMIENTO", StringType, true)
       .add("CODMES", StringType, true)
       .add("RANGO_SUELDO", StringType, true)
       .add("MTOTRANSACCION", DoubleType, true)
 
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF("RANGO_SUELDO").equalTo("\\N")) && (tablonDF("CODMES").between(inicio, fin)))
-      .groupBy("CODMES","RANGO_SUELDO").agg(avg("MTOTRANSACCION").as("MONTO_PROMEDIO")).orderBy("CODMES", "RANGO_SUELDO")
+      .groupBy("CODMES", "RANGO_SUELDO").agg(avg("MTOTRANSACCION").as("MONTO_PROMEDIO")).orderBy("CODMES", "RANGO_SUELDO")
 
   }
 
   def main(args: Array[String]) {
-
-    Logger.getLogger("org").setLevel(Level.ERROR)
 
     val x = byClientes("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
     x.show()
 
     val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
     y.show()
-    
+
     val z = montoPromedio("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
     z.show()
 
   }
-  
-  
+
 }

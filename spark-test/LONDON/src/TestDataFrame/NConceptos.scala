@@ -1,9 +1,7 @@
 package TestDataFrame
 
 import org.apache.spark._
-import org.apache.spark.SparkContext._
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -23,13 +21,17 @@ object NConceptos {
    * 57 => RANGO_EDAD
    */
 
+  /*
   val spark = SparkSession
     .builder
     .appName("PocDF")
     .master("local[*]")
     .getOrCreate()
 
+*/
   //Conceptos para MIS CLIENTES
+  val sc = new SparkContext("local[*]", "NConceptos")
+  val sqlContext = new org.apache.spark.sql.SQLContext(sc)
   val lista = List(("SEXO_CLIENTE",43),("RANGO_SUELDO",46),("DESTIPUSODIGITAL",48),("RANGO_EDAD",57))  
     
   def byClientes2(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
@@ -39,13 +41,13 @@ object NConceptos {
     val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
     val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
     
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0))))
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0))))
     val cabeceras = "CODESTABLECIMIENTO CODMES "+conceptos
  
     val camposDF = cabeceras.split(" ").map(fieldName => StructField(fieldName, StringType, nullable = true))
     val schema = StructType(camposDF)
 
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
 
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) 
        && (!tablonDF(concepto2).equalTo("\\N")) && (tablonDF("CODMES")
@@ -65,13 +67,13 @@ object NConceptos {
     val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
     val valor3 = lista.filter(x => (x._1 == concepto3)).map(f => f._2)
     
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)),r(valor3(0))))
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)),r(valor3(0))))
     val cabeceras = "CODESTABLECIMIENTO CODMES "+conceptos
  
     val camposDF = cabeceras.split(" ").map(fieldName => StructField(fieldName, StringType, nullable = true))
     val schema = StructType(camposDF)
 
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
 
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) 
        && (!tablonDF(concepto2).equalTo("\\N")) && (!tablonDF(concepto3).equalTo("\\N")) && (tablonDF("CODMES")
@@ -89,7 +91,7 @@ object NConceptos {
     val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
     val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
     
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(12).toDouble))
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(12).toDouble))
     
     val schema = new StructType()
       .add("CODESTABLECIMIENTO", StringType, true)
@@ -98,7 +100,7 @@ object NConceptos {
       .add(concepto2, StringType, true)
       .add("MTOTRANSACCION", DoubleType, true)
        
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) && (!tablonDF(concepto2).equalTo("\\N")) && tablonDF("CODMES")
       .between(inicio, fin)).groupBy("CODMES", concepto1, concepto2)
       .agg(sum("MTOTRANSACCION").as("MONTO_TOTAL"))
@@ -115,7 +117,7 @@ object NConceptos {
     val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
     val valor3 = lista.filter(x => (x._1 == concepto3)).map(f => f._2)
     
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(valor3(0)), r(12).toDouble))
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(valor3(0)), r(12).toDouble))
     
     val schema = new StructType()
       .add("CODESTABLECIMIENTO", StringType, true)
@@ -125,7 +127,7 @@ object NConceptos {
       .add(concepto3, StringType, true)
       .add("MTOTRANSACCION", DoubleType, true)
        
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) && (!tablonDF(concepto2).equalTo("\\N")) 
         && (!tablonDF(concepto3).equalTo("\\N")) && tablonDF("CODMES")
       .between(inicio, fin)).groupBy("CODMES", concepto1, concepto2, concepto3)
@@ -141,7 +143,7 @@ object NConceptos {
     val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
     val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
     
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(12).toDouble))
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(12).toDouble))
     
     val schema = new StructType()
       .add("CODESTABLECIMIENTO", StringType, true)
@@ -150,7 +152,7 @@ object NConceptos {
       .add(concepto2, StringType, true)
       .add("MTOTRANSACCION", DoubleType, true)
 
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) 
        && (!tablonDF(concepto2).equalTo("\\N")) && (tablonDF("CODMES")
       .between(inicio, fin)))
@@ -169,7 +171,7 @@ object NConceptos {
     val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
     val valor3 = lista.filter(x => (x._1 == concepto3)).map(f => f._2)
     
-    val rddTablon = spark.sparkContext.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(valor3(0)), r(12).toDouble))
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(valor3(0)), r(12).toDouble))
     
     val schema = new StructType()
       .add("CODESTABLECIMIENTO", StringType, true)
@@ -179,7 +181,7 @@ object NConceptos {
       .add(concepto3, StringType, true)
       .add("MTOTRANSACCION", DoubleType, true)
 
-    val tablonDF = spark.createDataFrame(rddTablon, schema)
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) 
        && (!tablonDF(concepto2).equalTo("\\N")) && (!tablonDF(concepto3).equalTo("\\N")) && (tablonDF("CODMES")
       .between(inicio, fin)))

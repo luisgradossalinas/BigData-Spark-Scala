@@ -1,12 +1,10 @@
 package TestDataFrame
 
 import org.apache.spark._
-import org.apache.spark.SparkContext._
-import org.apache.log4j._
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
 import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
 
 object dframe {
 

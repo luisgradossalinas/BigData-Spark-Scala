@@ -1,7 +1,6 @@
 package hiveTest
 
 import org.apache.spark._
-import org.apache.spark.SparkContext._
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.types._
 import org.apache.spark.sql._
@@ -23,6 +22,7 @@ object AllConcepts {
       .groupBy("CODMES", concepto1)
       .agg(count("CODMES").as("TOTAL"))
       .orderBy("CODMES", concepto1)
+      
 
   }
 
@@ -183,11 +183,9 @@ object AllConcepts {
 
   def main(args: Array[String]) {
 
-    byClientes_Total(List("100070934", "100070905"), "201501", "201512", List("SEXO_CLIENTE", "RANGO_SUELDO", "DESTIPUSODIGITAL")).show()
-
-    evolucionCompras_Total(List("100070934", "100070905"), "201501", "201506", List("SEXO_CLIENTE")).show()
-
-    montoPromedio_Total(List("100070934", "100070905"), "201501", "201506", List("SEXO_CLIENTE")).show()
+    AllConcepts.byClientes_Total(List("100070934", "100070905"), "201701", "201702", List("SEXO_CLIENTE", "RANGO_SUELDO", "DESTIPUSODIGITAL")).show()
+    AllConcepts.evolucionCompras_Total(List("100070934", "100070905"), "201701", "201702", List("SEXO_CLIENTE")).show()
+    AllConcepts.montoPromedio_Total(List("100070934", "100070905"), "201701", "201702", List("SEXO_CLIENTE")).show()
 
   }
 

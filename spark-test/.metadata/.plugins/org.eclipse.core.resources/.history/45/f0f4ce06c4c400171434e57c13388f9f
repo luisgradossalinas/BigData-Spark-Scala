@@ -1,7 +1,0 @@
-package KPI
-
-import org.apache.spark._
-
-class dframe {
-  
-}
