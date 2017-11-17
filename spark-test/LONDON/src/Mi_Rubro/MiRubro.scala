@@ -8,19 +8,6 @@ import org.apache.spark.sql.functions._
 
 object MiRubro {
 
-  /*
-   * 17 => RUC
-   * 6 => CODESTABLECIMIENTO
-   * 12 => MTOTRANSACCION
-   * 14 => CODCLAVECIC_CLIENTE
-   * 25 => CODMES
-   * 43 => SEXO_CLIENTE
-   * 46 => RANGO_SUELDO
-   * 47 => TIPUSODIGITAL
-   * 48 => DESTIPUSODIGITAL
-   * 57 => RANGO_EDAD
-   */
-
   val sc = new SparkContext("local[*]", "MiRubro")
 
   val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)

@@ -9,19 +9,6 @@ import org.apache.spark.sql.functions._
 object NConceptos {
 
   /*
-   * 17 => RUC
-   * 6 => CODESTABLECIMIENTO
-   * 12 => MTOTRANSACCION
-   * 14 => CODCLAVECIC_CLIENTE
-   * 25 => CODMES
-   * 43 => SEXO_CLIENTE
-   * 46 => RANGO_SUELDO
-   * 47 => TIPUSODIGITAL
-   * 48 => DESTIPUSODIGITAL
-   * 57 => RANGO_EDAD
-   */
-
-  /*
   val spark = SparkSession
     .builder
     .appName("PocDF")

@@ -9,8 +9,8 @@ import org.apache.spark.sql.functions._
 object MiRubroDepartamento {
 
   val sc = new SparkContext("local[*]", "MiRubroDepartamento")
-  val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
   
+  val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
   val tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON where (codmes >= 201701 and codmes <= 201702) and rubro_bcp is not null")
 
   def KPI_RubroDepartamentoGeneralMesAnual(departamento: String, rubro: String, fecha: String): DataFrame = {
