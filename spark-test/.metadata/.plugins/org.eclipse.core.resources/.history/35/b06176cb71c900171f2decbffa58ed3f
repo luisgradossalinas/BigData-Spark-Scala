@@ -1,0 +1,41 @@
+package hiveTest
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
+object DosConceptos {
+
+  var sc = new SparkContext("local[*]", "DosConceptos")
+  var sqlContext = new org.apache.spark.sql.SQLContext(sc)
+  
+  var hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
+  var tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON")
+
+  def byClientes2(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val concepto1 = conceptos.split(",")(0)
+    val concepto2 = conceptos.split(",")(1)
+
+   // tablonDF.select(tablonDF("CODMES"), tablonDF(concepto1),tablonDF(concepto2)).filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*))).show()
+    
+    return tablonDF.filter((tablonDF("codestablecimiento") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N"))
+      && (!tablonDF(concepto2).equalTo("\\N")) && (tablonDF("codmes")
+        .between(inicio, fin)))
+      .groupBy("codmes", concepto1, concepto2)
+      .agg(count("codmes").as("TOTAL"))
+      .orderBy("codmes", concepto1, concepto2)
+
+  }
+
+  def main(args: Array[String]) {
+
+    val kpiCalculo2 = byClientes2("tablon.tsv", List("100070934", "100070905"), "201501", "201512", "sexo_cliente,rango_sueldo")
+    kpiCalculo2.show()
+
+  }
+
+}

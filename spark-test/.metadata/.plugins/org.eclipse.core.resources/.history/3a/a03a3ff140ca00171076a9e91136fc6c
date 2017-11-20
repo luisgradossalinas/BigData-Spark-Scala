@@ -1,0 +1,219 @@
+package TestDataFrame
+
+import org.apache.spark._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
+object NConceptos {
+
+  /*
+   * 17 => RUC
+   * 6 => CODESTABLECIMIENTO
+   * 12 => MTOTRANSACCION
+   * 14 => CODCLAVECIC_CLIENTE
+   * 25 => CODMES
+   * 43 => SEXO_CLIENTE
+   * 46 => RANGO_SUELDO
+   * 47 => TIPUSODIGITAL
+   * 48 => DESTIPUSODIGITAL
+   * 57 => RANGO_EDAD
+   */
+
+  /*
+  val spark = SparkSession
+    .builder
+    .appName("PocDF")
+    .master("local[*]")
+    .getOrCreate()
+
+*/
+  //Conceptos para MIS CLIENTES
+  val sc = new SparkContext("local[*]", "NConceptos")
+  val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+  val lista = List(("SEXO_CLIENTE",43),("RANGO_SUELDO",46),("DESTIPUSODIGITAL",48),("RANGO_EDAD",57))  
+    
+  def byClientes2(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val concepto1 = conceptos.split(" ")(0)
+    val concepto2 = conceptos.split(" ")(1)
+    val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
+    val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
+    
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0))))
+    val cabeceras = "CODESTABLECIMIENTO CODMES "+conceptos
+ 
+    val camposDF = cabeceras.split(" ").map(fieldName => StructField(fieldName, StringType, nullable = true))
+    val schema = StructType(camposDF)
+
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) 
+       && (!tablonDF(concepto2).equalTo("\\N")) && (tablonDF("CODMES")
+      .between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2)
+      .agg(count("CODMES").as("TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2)
+
+  }
+  
+  def byClientes3(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val concepto1 = conceptos.split(" ")(0)
+    val concepto2 = conceptos.split(" ")(1)
+    val concepto3 = conceptos.split(" ")(2)
+    val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
+    val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
+    val valor3 = lista.filter(x => (x._1 == concepto3)).map(f => f._2)
+    
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)),r(valor3(0))))
+    val cabeceras = "CODESTABLECIMIENTO CODMES "+conceptos
+ 
+    val camposDF = cabeceras.split(" ").map(fieldName => StructField(fieldName, StringType, nullable = true))
+    val schema = StructType(camposDF)
+
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) 
+       && (!tablonDF(concepto2).equalTo("\\N")) && (!tablonDF(concepto3).equalTo("\\N")) && (tablonDF("CODMES")
+      .between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2, concepto3)
+      .agg(count("CODMES").as("TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2, concepto3)
+
+  }
+  
+  def evolucionCompras2(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val concepto1 = conceptos.split(" ")(0)
+    val concepto2 = conceptos.split(" ")(1)
+    val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
+    val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
+    
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(12).toDouble))
+    
+    val schema = new StructType()
+      .add("CODESTABLECIMIENTO", StringType, true)
+      .add("CODMES", StringType, true)
+      .add(concepto1, StringType, true)
+      .add(concepto2, StringType, true)
+      .add("MTOTRANSACCION", DoubleType, true)
+       
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) && (!tablonDF(concepto2).equalTo("\\N")) && tablonDF("CODMES")
+      .between(inicio, fin)).groupBy("CODMES", concepto1, concepto2)
+      .agg(sum("MTOTRANSACCION").as("MONTO_TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2)
+  
+  }
+  
+  def evolucionCompras3(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val concepto1 = conceptos.split(" ")(0)
+    val concepto2 = conceptos.split(" ")(1)
+    val concepto3 = conceptos.split(" ")(2)
+    val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
+    val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
+    val valor3 = lista.filter(x => (x._1 == concepto3)).map(f => f._2)
+    
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(valor3(0)), r(12).toDouble))
+    
+    val schema = new StructType()
+      .add("CODESTABLECIMIENTO", StringType, true)
+      .add("CODMES", StringType, true)
+      .add(concepto1, StringType, true)
+      .add(concepto2, StringType, true)
+      .add(concepto3, StringType, true)
+      .add("MTOTRANSACCION", DoubleType, true)
+       
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) && (!tablonDF(concepto2).equalTo("\\N")) 
+        && (!tablonDF(concepto3).equalTo("\\N")) && tablonDF("CODMES")
+      .between(inicio, fin)).groupBy("CODMES", concepto1, concepto2, concepto3)
+      .agg(sum("MTOTRANSACCION").as("MONTO_TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2, concepto3)
+  
+  }
+  
+  def montoPromedio2(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val concepto1 = conceptos.split(" ")(0)
+    val concepto2 = conceptos.split(" ")(1)
+    val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
+    val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
+    
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(12).toDouble))
+    
+    val schema = new StructType()
+      .add("CODESTABLECIMIENTO", StringType, true)
+      .add("CODMES", StringType, true)
+      .add(concepto1, StringType, true)
+      .add(concepto2, StringType, true)
+      .add("MTOTRANSACCION", DoubleType, true)
+
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) 
+       && (!tablonDF(concepto2).equalTo("\\N")) && (tablonDF("CODMES")
+      .between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2)
+      .agg(avg("MTOTRANSACCION").as("MONTO_PROMEDIO"))
+      .orderBy("CODMES", concepto1, concepto2)
+
+  }
+  
+  def montoPromedio3(ruta: String, esta: List[String], inicio: String, fin: String, conceptos: String): DataFrame = {
+
+    val concepto1 = conceptos.split(" ")(0)
+    val concepto2 = conceptos.split(" ")(1)
+    val concepto3 = conceptos.split(" ")(2)
+    val valor1 = lista.filter(x => (x._1 == concepto1)).map(f => f._2)
+    val valor2 = lista.filter(x => (x._1 == concepto2)).map(f => f._2)
+    val valor3 = lista.filter(x => (x._1 == concepto3)).map(f => f._2)
+    
+    val rddTablon = sc.textFile(ruta).map(r => r.split("\t")).map(r => Row(r(6), r(25), r(valor1(0)), r(valor2(0)), r(valor3(0)), r(12).toDouble))
+    
+    val schema = new StructType()
+      .add("CODESTABLECIMIENTO", StringType, true)
+      .add("CODMES", StringType, true)
+      .add(concepto1, StringType, true)
+      .add(concepto2, StringType, true)
+      .add(concepto3, StringType, true)
+      .add("MTOTRANSACCION", DoubleType, true)
+
+    val tablonDF = sqlContext.createDataFrame(rddTablon, schema)
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("\\N")) 
+       && (!tablonDF(concepto2).equalTo("\\N")) && (!tablonDF(concepto3).equalTo("\\N")) && (tablonDF("CODMES")
+      .between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2, concepto3)
+      .agg(avg("MTOTRANSACCION").as("MONTO_PROMEDIO"))
+      .orderBy("CODMES", concepto1, concepto2, concepto3)
+
+  }
+
+  def main(args: Array[String]) {
+
+    //val kpiCalculo2 = byClientes2("tablon.tsv", List("100070934", "100070905"), "201501", "201512","SEXO_CLIENTE RANGO_SUELDO")
+    //kpiCalculo2.show()
+    
+    //val kpiCalculo3 = byClientes3("tablon.tsv", List("100070934", "100070905"), "201501", "201512","SEXO_CLIENTE RANGO_SUELDO DESTIPUSODIGITAL")
+    //kpiCalculo3.show()
+    
+    //val kpiEvol2 = evolucionCompras2("tablon.tsv", List("100070934", "100070905"), "201501", "201512","SEXO_CLIENTE RANGO_SUELDO")
+    //kpiEvol2.show()
+    
+    //val kpiEvol3 = evolucionCompras3("tablon.tsv", List("100070934", "100070905"), "201501", "201512","SEXO_CLIENTE RANGO_SUELDO DESTIPUSODIGITAL")
+    //kpiEvol3.show()
+    
+    //val kpiMontoPromedio2 = montoPromedio2("tablon.tsv", List("100070934", "100070905"), "201501", "201512","SEXO_CLIENTE RANGO_SUELDO")
+    //kpiMontoPromedio2.show()
+    
+    val kpiMontoPromedio3 = montoPromedio3("tablon.tsv", List("100070934", "100070905"), "201501", "201512","SEXO_CLIENTE RANGO_SUELDO DESTIPUSODIGITAL")
+    kpiMontoPromedio3.show()
+
+    
+    
+  }
+
+}

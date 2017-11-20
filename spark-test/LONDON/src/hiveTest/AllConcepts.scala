@@ -11,7 +11,7 @@ object AllConcepts {
   val sc = new SparkContext("local[*]", "AllConcepts")
 
   val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
-  val tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON where codmes >= 201701 and codmes <= 201702")
+  val tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON limit 5000000")
 
   def oneConcept(esta: List[String], inicio: String, fin: String, conceptos: List[String]): DataFrame = {
 
@@ -21,9 +21,13 @@ object AllConcepts {
       && (tablonDF("CODMES").between(inicio, fin)))
       .groupBy("CODMES", concepto1)
       .agg(
-        count("CODMES").as("TOTAL_TRANSACCIONES"),
-        sum("MTOTRANSACCION").as("MONTO_TOTAL"),
-        avg("MTOTRANSACCION").as("MONTO_PROMEDIO"))
+        countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
+        avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
+        sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
+        (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
+        (count("RUBRO_BCP") / countDistinct("CODCLAVECIC_CLIENTE")).as("PROM_TRX_CLI")
+        )
       .orderBy("CODMES", concepto1)
 
   }
@@ -37,9 +41,13 @@ object AllConcepts {
       && (!tablonDF(concepto2).equalTo("null")) && (tablonDF("CODMES").between(inicio, fin)))
       .groupBy("CODMES", concepto1, concepto2)
       .agg(
-        count("CODMES").as("TOTAL_TRANSACCIONES"),
-        sum("MTOTRANSACCION").as("MONTO_TOTAL"),
-        avg("MTOTRANSACCION").as("MONTO_PROMEDIO"))
+        countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
+        avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
+        sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
+        (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
+        (count("RUBRO_BCP") / countDistinct("CODCLAVECIC_CLIENTE")).as("PROM_TRX_CLI")
+      )
       .orderBy("CODMES", concepto1, concepto2)
 
   }
@@ -54,9 +62,12 @@ object AllConcepts {
       && (!tablonDF(concepto2).equalTo("null")) && (!tablonDF(concepto3).equalTo("null")) && (tablonDF("CODMES").between(inicio, fin)))
       .groupBy("CODMES", concepto1, concepto2, concepto3)
       .agg(
-        count("CODMES").as("TOTAL_TRANSACCIONES"),
-        sum("MTOTRANSACCION").as("MONTO_TOTAL"),
-        avg("MTOTRANSACCION").as("MONTO_PROMEDIO")
+        countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
+        avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
+        sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
+        (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
+        (count("RUBRO_BCP") / countDistinct("CODCLAVECIC_CLIENTE")).as("PROM_TRX_CLI")
       )
       .orderBy("CODMES", concepto1, concepto2, concepto3)
 

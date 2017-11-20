@@ -4917,3 +4917,143 @@ java.lang.Throwable
 	at scala.Option.map(Option.scala:146)
 	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 12:18:38.150
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Rubro\MiRubroDepartamento.scala at: offset: 18, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 12:38:10.532
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\ProcedenciaClientes.scala at: offset: 651, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 14:49:21.886
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Rubro\MiRubroDepartamento.scala at: offset: 2561, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 15:20:22.546
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\ProcedenciaClientes.scala at: offset: 849, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 15:20:22.607
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\ProcedenciaClientes.scala at: offset: 788, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 15:50:19.332
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\hiveTest\AllConcepts.scala at: offset: 2704, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 16:17:51.430
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$25(ScalaHoverImpl.scala:227)
+	at scala.Option$WithFilter.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$lzycompute$1(ScalaHoverImpl.scala:226)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$1(ScalaHoverImpl.scala:205)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$2(ScalaHoverImpl.scala:238)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$1(ScalaHoverImpl.scala:103)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:101)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.super$getHoverInfo2(TextHoverFactory.scala:53)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$6(TextHoverFactory.scala:53)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$1(TextHoverFactory.scala:51)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 16:48:16.601
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\ProcedenciaClientes.scala at: offset: 23, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 17:15:47.308
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Negocio\Kpi_Hora.scala at: offset: 908, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 17:16:31.856
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Negocio\Kpi_Hora.scala at: offset: 614, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 17:16:33.300
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Negocio\Kpi_Hora.scala at: offset: 755, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 17:23:06.818
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Negocio\Kpi_Hora.scala at: offset: 687, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-17 17:32:40.999
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\hiveTest\AllConcepts.scala at: offset: 236, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-20 10:41:24.946
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\GastosClientes.scala at: offset: 556, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-20 10:55:09.844
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\ProcedenciaClientes.scala at: offset: 911, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-20 10:57:34.673
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\ProcedenciaClientes.scala at: offset: 839, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-20 11:00:42.703
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Rubro\MiRubroDepartamento.scala at: offset: 782, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-20 14:32:00.180
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$25(ScalaHoverImpl.scala:227)
+	at scala.Option$WithFilter.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$lzycompute$1(ScalaHoverImpl.scala:226)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$1(ScalaHoverImpl.scala:205)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$2(ScalaHoverImpl.scala:238)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$1(ScalaHoverImpl.scala:103)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:101)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.super$getHoverInfo2(TextHoverFactory.scala:53)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$6(TextHoverFactory.scala:53)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$1(TextHoverFactory.scala:51)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)

@@ -1,0 +1,33 @@
+package hiveTest
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
+object DosConceptos {
+  
+  
+  var sc = new SparkContext("local[*]", "DosConceptos")
+  var sqlContext = new org.apache.spark.sql.SQLContext(sc)
+  
+  
+  def main(args: Array[String]) {
+
+
+    /*
+    val x = byClientes("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    x.show()
+
+    val y = evolucionCompras("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    y.show()
+    
+    val z = montoPromedio("tablon.tsv", List("100070934", "100070905"), "201501", "201512")
+    z.show()
+		*/
+    
+  }
+  
+}

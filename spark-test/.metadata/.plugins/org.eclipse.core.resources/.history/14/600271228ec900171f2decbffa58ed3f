@@ -1,0 +1,46 @@
+package Mi_Rubro
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
+object General_Procedencia {
+  
+  /*
+   * 17 => RUC
+   * 6 => CODESTABLECIMIENTO
+   * 12 => MTOTRANSACCION
+   * 14 => CODCLAVECIC_CLIENTE
+   * 25 => CODMES
+   * 43 => SEXO_CLIENTE
+   * 46 => RANGO_SUELDO
+   * 47 => TIPUSODIGITAL
+   * 48 => DESTIPUSODIGITAL
+   * 57 => RANGO_EDAD
+   */
+  
+  var sc = new SparkContext("local[*]", "General_Procedencia")
+
+  var hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
+  var tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON where codmes >= 201701 and codmes <= 201702")
+  
+  def montoPromedio(ruc: String, inicio: String, fin: String, conceptos: List[String]): DataFrame = {
+
+    return tablonDF.filter((tablonDF("RUC").equalTo(ruc)) && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("CODMES", "RUC")
+      .agg(avg("MTOTRANSACCION").as("MONTO_PROMEDIO"))
+      .orderBy("CODMES", "RUC")
+
+  }
+  
+  
+  def main(args:Array[String]) {
+    
+    montoPromedio("20700334567", "201701", "201702", List("SEXO_CLIENTE")).show()
+    
+  }
+  
+}

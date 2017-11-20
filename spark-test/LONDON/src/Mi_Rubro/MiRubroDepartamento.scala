@@ -21,7 +21,7 @@ object MiRubroDepartamento {
       .groupBy("CODMES")
       .agg(
         countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
-        count("RUBRO_BCP").as("CANT_TOT_TRX"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
         avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
         sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
         (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
@@ -38,7 +38,7 @@ object MiRubroDepartamento {
       .groupBy("CODMES", "DISTRITO_ESTABLEC")
       .agg(
         countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
-        count("RUBRO_BCP").as("CANT_TOT_TRX"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
         avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
         sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
         (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
@@ -55,7 +55,7 @@ object MiRubroDepartamento {
       .groupBy("FECEFECTIVA")
       .agg(
         countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
-        count("RUBRO_BCP").as("CANT_TOT_TRX"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
         avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
         sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
         (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),

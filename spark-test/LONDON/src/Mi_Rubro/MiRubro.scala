@@ -7,7 +7,7 @@ import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
 
 object MiRubro {
-
+  
   val sc = new SparkContext("local[*]", "MiRubro")
 
   val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
@@ -19,7 +19,7 @@ object MiRubro {
       .groupBy("CODMES")
       .agg(
         countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
-        count("RUBRO_BCP").as("CANT_TOT_TRX"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
         avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
         sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
         (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
@@ -35,7 +35,7 @@ object MiRubro {
       .groupBy("CODMES", "DEPARTAMENTO_ESTABLEC")
       .agg(
         countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
-        count("RUBRO_BCP").as("CANT_TOT_TRX"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
         avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
         sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
         (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
@@ -51,7 +51,7 @@ object MiRubro {
       .groupBy("FECEFECTIVA")
       .agg(
         countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"),
-        count("RUBRO_BCP").as("CANT_TOT_TRX"),
+        count("CODESTABLECIMIENTO").as("CANT_TOT_TRX"),
         avg("MTOTRANSACCION").as("MONT_PROM_TRX"),
         sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
         (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),

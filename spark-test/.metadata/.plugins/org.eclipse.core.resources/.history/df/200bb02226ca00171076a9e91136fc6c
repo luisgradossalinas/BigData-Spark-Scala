@@ -1,0 +1,50 @@
+package Mi_Rubro
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
+object General_Procedencia {
+
+  /*
+   * 17 => RUC
+   * 6 => CODESTABLECIMIENTO
+   * 12 => MTOTRANSACCION
+   * 14 => CODCLAVECIC_CLIENTE
+   * 25 => CODMES
+   * 43 => SEXO_CLIENTE
+   * 46 => RANGO_SUELDO
+   * 47 => TIPUSODIGITAL
+   * 48 => DESTIPUSODIGITAL
+   * 57 => RANGO_EDAD
+   */
+
+  val sc = new SparkContext("local[*]", "General_Procedencia")
+
+  val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
+  val tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON where codmes >= 201701 and codmes <= 201702")
+
+  def miRubro(rubro: String, inicio: String, fin: String): DataFrame = {
+
+    return tablonDF.filter((tablonDF("RUBRO_BCP").equalTo(rubro)) && (!tablonDF("CODCLAVECIC_CLIENTE").equalTo("null")) && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("CODMES")
+      .agg(countDistinct("CODCLAVECIC_CLIENTE").as("CANT_CLI_DIST"), 
+          count("RUBRO_BCP").as("CANT_TOT_TRX"), 
+          avg("MTOTRANSACCION").as("MONT_PROM_TRX"), 
+          sum("MTOTRANSACCION").as("MONT_TOT_TRX"),
+        (sum("MTOTRANSACCION") / countDistinct("CODCLAVECIC_CLIENTE")).as("MONT_TRX_CLI"),
+        (count("RUBRO_BCP") / countDistinct("CODCLAVECIC_CLIENTE")).as("PROM_TRX_CLI"))
+      .orderBy("CODMES")
+
+  }
+
+  def main(args: Array[String]) {
+
+    miRubro("RESTAURANTES", "201701", "201702").show()
+
+  }
+
+}

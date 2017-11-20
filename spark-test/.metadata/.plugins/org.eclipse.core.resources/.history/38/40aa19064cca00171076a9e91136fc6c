@@ -1,0 +1,24 @@
+package test
+
+import org.apache.spark._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
+object testing {
+
+  val sc = new SparkContext("local[*]", "testing")
+  val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+
+  def main(args: Array[String]) {
+
+    val lista = List("100070934", "100070905")
+    println("El primer valor de la lista es: " + lista(0))
+    println("El segundo valor de la lista es: " + lista(1))
+
+    println(lista.length)
+
+  }
+
+}

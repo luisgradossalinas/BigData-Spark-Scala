@@ -1,0 +1,15 @@
+package test
+
+object testing {
+  
+  
+  def main(Args: Array[String]) {
+    
+    val lista = List("100070934", "100070905")
+    println("El primer valor de la lista es: " + lista(0))
+    println("El segundo valor de la lista es: " + lista(1))
+    
+  }
+  
+  
+}

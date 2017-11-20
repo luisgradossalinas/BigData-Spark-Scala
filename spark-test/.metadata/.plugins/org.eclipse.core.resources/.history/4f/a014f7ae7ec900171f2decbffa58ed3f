@@ -1,0 +1,122 @@
+package hiveTest
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.types._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
+object AllConcepts {
+
+  var sc = new SparkContext("local[*]", "AllConcepts")
+
+  var hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
+  var tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON where codmes >= 201501 and codmes <= 201512")
+
+  def byClientes1(esta: List[String], inicio: String, fin: String, conceptos: List[String]): DataFrame = {
+
+    val concepto1 = conceptos(0)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("null"))
+      && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("CODMES", concepto1)
+      .agg(count("CODMES").as("TOTAL"))
+      .orderBy("CODMES", concepto1)
+
+  }
+
+  def byClientes2(esta: List[String], inicio: String, fin: String, conceptos: List[String]): DataFrame = {
+
+    val concepto1 = conceptos(0)
+    val concepto2 = conceptos(1)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("null"))
+      && (!tablonDF(concepto2).equalTo("null")) && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2)
+      .agg(count("CODMES").as("TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2)
+
+  }
+
+  def byClientes3(esta: List[String], inicio: String, fin: String, conceptos: List[String]): DataFrame = {
+
+    val concepto1 = conceptos(0)
+    val concepto2 = conceptos(1)
+    val concepto3 = conceptos(2)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("null"))
+      && (!tablonDF(concepto2).equalTo("null")) && (!tablonDF(concepto3).equalTo("null")) && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2, concepto3)
+      .agg(count("CODMES").as("total"))
+      .orderBy("CODMES", concepto1, concepto2, concepto3)
+
+  }
+
+  def byClientes_Total(esta: List[String], inicio: String, fin: String, conceptos: List[String]): DataFrame = {
+
+    var df = byClientes1(esta, inicio, fin, conceptos)
+    
+    if (conceptos.length == 1) {
+      df = byClientes1(esta, inicio, fin, conceptos)
+    } else if (conceptos.length == 2) {
+      df = byClientes2(esta, inicio, fin, conceptos)
+    } else if (conceptos.length == 3) {
+      df = byClientes3(esta, inicio, fin, conceptos)
+    }
+
+     return df
+    
+  }
+  
+  def evolucionCompras1(esta: List[String], inicio: String, fin: String, conceptos: List[String]): DataFrame = {
+
+    val concepto1 = conceptos(0)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("null"))
+      && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("CODMES", concepto1)
+      .agg(sum("MTOTRANSACCION").as("MONTO_TOTAL"))
+      .orderBy("CODMES", concepto1)
+    
+  }
+  
+  def evolucionCompras2(esta: List[String], inicio: String, fin: String, conceptos: List[String]): DataFrame = {
+
+    val concepto1 = conceptos(0)
+    val concepto2 = conceptos(1)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("null")) 
+      && (!tablonDF(concepto2).equalTo("null")) && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2)
+      .agg(sum("MTOTRANSACCION").as("MONTO_TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2)
+    
+  }
+  
+  def evolucionCompras3(esta: List[String], inicio: String, fin: String, conceptos: List[String]): DataFrame = {
+
+    val concepto1 = conceptos(0)
+    val concepto2 = conceptos(1)
+    val concepto3 = conceptos(2)
+
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (!tablonDF(concepto1).equalTo("null")) 
+      && (!tablonDF(concepto2).equalTo("null")) && (!tablonDF(concepto3).equalTo("null")) && (tablonDF("CODMES").between(inicio, fin)))
+      .groupBy("CODMES", concepto1, concepto2, concepto3)
+      .agg(sum("MTOTRANSACCION").as("MONTO_TOTAL"))
+      .orderBy("CODMES", concepto1, concepto2, concepto3)
+    
+  }
+
+  
+  
+  
+  def main(args: Array[String]) {
+
+    byClientes_Total(List("100070934", "100070905"), "201501", "201512",List("SEXO_CLIENTE","RANGO_SUELDO","DESTIPUSODIGITAL")).show()
+    
+    evolucionCompras3(List("100070934", "100070905"), "201501", "201506",List("SEXO_CLIENTE","RANGO_SUELDO","DESTIPUSODIGITAL")).show()
+    
+  }
+
+}
