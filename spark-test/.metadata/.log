@@ -5057,3 +5057,21 @@ java.lang.Throwable
 	at scala.Option.map(Option.scala:146)
 	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-20 17:49:10.703
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\ProcedenciaClientes.scala at: offset: 309, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-20 17:56:04.527
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\TipoPersona.scala at: offset: 969, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-20 17:56:51.989
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\ProcedenciaClientes.scala at: offset: 1353, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-21 10:32:56.174
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\TipoPersona.scala at: offset: 729, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-21 10:32:56.210
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\TipoPersona.scala at: offset: 1266, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-21 11:10:48.275
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\TipoPersona.scala at: offset: 366, length: 0

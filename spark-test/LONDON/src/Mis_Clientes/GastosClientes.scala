@@ -13,7 +13,7 @@ object GastosClientes {
   val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
   val tablonDF = hiveContext.sql("SELECT * FROM LONDON_SMART.TABLON where (codmes >= 201701 and codmes <= 201707)")
 
-  def KPI_Gastos(esta: List[String], rubro: String, anio: String): DataFrame = {
+  def KPI_GastosClientes(esta: List[String], rubro: String, anio: String): DataFrame = {
 
     return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*))
       && (tablonDF("RUBRO_BCP").equalTo(rubro)) && (tablonDF("CODMES").substr(1, 4).equalTo(anio)))

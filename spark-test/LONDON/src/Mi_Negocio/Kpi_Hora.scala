@@ -28,8 +28,6 @@ object Kpi_Hora {
       .orderBy("HORA")
 
   }
-  
-  //SUBSTRING(A.HORTRANSACCION,1,2) 
 
   def main(args: Array[String]) {
 
