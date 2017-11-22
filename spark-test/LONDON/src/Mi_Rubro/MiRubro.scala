@@ -62,9 +62,9 @@ object MiRubro {
 
   def main(args: Array[String]) {
 
-    KPI_RubroGeneralMesAnual("RESTAURANTES", "2017").show()
-    KPI_RubroGeneralDiaMes("RESTAURANTES", "201701").show()
-    KPI_RubroProcedenciaMesAnual("RESTAURANTES", "2017").show()
+    MiRubro.KPI_RubroGeneralMesAnual("RESTAURANTES", "2017").show()
+    MiRubro.KPI_RubroGeneralDiaMes("RESTAURANTES", "201701").show()
+    MiRubro.KPI_RubroProcedenciaMesAnual("RESTAURANTES", "2017").show()
 
   }
 

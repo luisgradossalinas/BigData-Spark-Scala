@@ -15,7 +15,7 @@ object TipoPersona {
 
   def KPI_MisClientes_TipoPersona(esta: List[String], rubro: String, anio: String): DataFrame = {
 
-    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*))
+    return tablonDF.filter((tablonDF("CODESTABLECIMIENTO") isin (esta: _*)) && (tablonDF("RUBRO_BCP").equalTo(rubro))
       && (!tablonDF("TIPO_PERSONA").equalTo("null")) && (tablonDF("CODMES").substr(1, 4).equalTo(anio)))
       .groupBy("CODMES", "TIPO_PERSONA")
       .agg(
@@ -31,9 +31,8 @@ object TipoPersona {
 
   def main(args: Array[String]) {
 
-    KPI_MisClientes_TipoPersona(List("100002009"), "SUPERMERCADOS Y MINIMERCADOS", "2017")
-    
-    //100002009-RECREACION-TIPO_DE_PERSONA-MES-ANUAL-2017
+    TipoPersona.KPI_MisClientes_TipoPersona(List("100002009"), "SUPERMERCADOS Y MINIMERCADOS", "2017").show()
+   
     
   }
 

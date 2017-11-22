@@ -31,7 +31,7 @@ object ProcedenciaClientes {
 
   def main(args: Array[String]) {
 
-    KPI_MisClientes_Procedencia(List("100002009"), "SUPERMERCADOS Y MINIMERCADOS", "2017").show()
+    ProcedenciaClientes.KPI_MisClientes_Procedencia(List("100002009"), "SUPERMERCADOS Y MINIMERCADOS", "2017").show()
 
   }
 

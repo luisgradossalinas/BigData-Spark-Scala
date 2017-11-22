@@ -66,9 +66,9 @@ object MiRubroDepartamento {
 
   def main(args: Array[String]) {
 
-    KPI_RubroDepartamentoGeneralMesAnual("AREQUIPA","SERVICIOS DENTALES", "2017").show()
-    KPI_RubroDepartamentoGenerallDiaMes("AREQUIPA","SERVICIOS DENTALES", "201701").show()
-    KPI_RubroDepartamentoProcedenciaMesAnual("AREQUIPA","SERVICIOS DENTALES", "2017").show()
+    MiRubroDepartamento.KPI_RubroDepartamentoGeneralMesAnual("AREQUIPA","SERVICIOS DENTALES", "2017").show()
+    MiRubroDepartamento.KPI_RubroDepartamentoGenerallDiaMes("AREQUIPA","SERVICIOS DENTALES", "201701").show()
+    MiRubroDepartamento.KPI_RubroDepartamentoProcedenciaMesAnual("AREQUIPA","SERVICIOS DENTALES", "2017").show()
 
   }
 

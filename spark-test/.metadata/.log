@@ -5075,3 +5075,52 @@ java.lang.Throwable
 
 !ENTRY org.scala-ide.sdt.core 1 0 2017-11-21 11:10:48.275
 !MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\TipoPersona.scala at: offset: 366, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-22 11:50:11.557
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Rubro\MiRubroDepartamento.scala at: offset: 418, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-22 12:08:41.186
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.$anonfun$buildStructure$2(ScalaCompilationUnit.scala:126)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:12)
+	at org.scalaide.util.Utils$.debugTimed(Utils.scala:28)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.$anonfun$buildStructure$1(ScalaCompilationUnit.scala:120)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.$anonfun$buildStructure$1$adapted(ScalaCompilationUnit.scala:113)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.buildStructure(ScalaCompilationUnit.scala:113)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.buildStructure$(ScalaCompilationUnit.scala:110)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.buildStructure(ScalaSourceFile.scala:71)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.makeConsistent(ScalaSourceFile.scala:123)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.$anonfun$reconciled$4(ScalaSourceFileEditor.scala:375)
+	at org.scalaide.util.Utils$.debugTimed(Utils.scala:28)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:370)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-22 12:12:48.201
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mis_Clientes\TipoPersona.scala at: offset: 223, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-22 12:13:49.356
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\Mi_Rubro\MiRubro.scala at: offset: 217, length: 0
+
+!ENTRY org.eclipse.jdt.ui 2 0 2017-11-22 12:14:30.210
+!MESSAGE The 'Scala Completion Proposal Computer' proposal computer from the 'org.scala-ide.sdt.core' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-22 12:18:44.646
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\test\testing2.scala at: offset: 138, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-11-22 12:23:59.787
+!MESSAGE Timeout while resolving hyperlink in D:\Mis Scripts - Linux\Pruebas-Concepto\spark-test\LONDON\src\test\testing2.scala at: offset: 210, length: 0
